@@ -3,13 +3,12 @@ import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./components/sections/Home";
-import { About } from "./components/sections/About";
+import { About as AboutSection } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/Footer";
-import { GameProjects } from "./pages/GameProjects";
-import { ArtProjects } from "./pages/ArtProjects";
-import { OtherProjects } from "./pages/OtherProjects";
+import { Portfolio } from "./pages/Portfolio";
+import { About } from "./pages/About";
 import { ProjectDetail } from "./pages/ProjectDetail";
 
 function App() {
@@ -41,20 +40,15 @@ function App() {
     }
 
     switch (currentPage) {
-      case "games":
-        return <GameProjects />;
-      case "art":
-        return <ArtProjects />;
-      case "other":
-        return <OtherProjects />;
+      case "portfolio":
+        return <Portfolio />;
+      case "about":
+        return <About />;
       default:
         return (
           <>
             <Navbar />
             <Home />
-            <Projects />
-            <Contact />
-            <Footer />
           </>
         );
     }

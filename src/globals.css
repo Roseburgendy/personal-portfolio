@@ -3,12 +3,14 @@
 /* ========== 颜色变量（浅色默认） ========== */
 :root {
   --bg: #fcf9f8;
-  --text: #111827;
+  --text: #201F26;
   --muted: #6b7280;
   --border: #f3ede9;
 
   --accent: #f88a4f;           /* dusty rose */
-  --accent-50: #fdf6f6;        /* very light rose */
+  --accent-50: #fdf6f6;
+  --accent-300:#f5a57a;        /* very light rose */
+  --accent-200:#f2c1a6; 
   --accent-600: #de5e17;       /* medium dusty rose */
   --accent-800: #8e3f15;       /* darker rose */
 
@@ -17,9 +19,203 @@
   --secondary-600: #56899f;       /* medium dusty rose */
   --secondary-800: #3b5a68;       /* darker rose */
 
-  --card-bg: #ffffff;
+  --card-bg: #FFF5EF;
+  --border:
   --shadow-soft: 0 2px 12px rgba(212, 165, 165, 0.12);
 }
+ /* Variables  */
+ :root {
+  --brand-scale-1-light: #FEFCFBFF;
+  --brand-scale-2-light: #FFF5EFFF;
+  --brand-scale-3-light: #FFE9DAFF;
+  --brand-scale-4-light: #FFD8BEFF;
+  --brand-scale-5-light: #FFCAA9FF;
+  --brand-scale-6-light: #FFBA91FF;
+  --brand-scale-7-light: #FFA474FF;
+  --brand-scale-8-light: #F98B50FF;
+  --brand-scale-9-light: #F88A4FFF;
+  --brand-scale-10-light: #EC7F43FF;
+  --brand-scale-11-light: #C35A17FF;
+  --brand-scale-12-light: #5C2B0FFF;
+  --brand-scale-alpha-1-light: #C0400005;
+  --brand-scale-alpha-2-light: #FF60000F;
+  --brand-scale-alpha-3-light: #FF680026;
+  --brand-scale-alpha-4-light: #FF660040;
+  --brand-scale-alpha-5-light: #FF620057;
+  --brand-scale-alpha-6-light: #FF60006E;
+  --brand-scale-alpha-7-light: #FF58008C;
+  --brand-scale-alpha-8-light: #F65600B0;
+  --brand-scale-alpha-9-light: #F55600B0;
+  --brand-scale-alpha-10-light: #E55200BD;
+  --brand-scale-alpha-11-light: #BD4A00E8;
+  --brand-scale-alpha-12-light: #521E00F0;
+  --brand-contrast-1-light: #FFFFFFFF;
+  --neutral-scale-1-light: #FCFCFDFF;
+  --neutral-scale-2-light: #F9F9FCFF;
+  --neutral-scale-3-light: #F0F0F4FF;
+  --neutral-scale-4-light: #E8E7EDFF;
+  --neutral-scale-5-light: #E1E0E7FF;
+  --neutral-scale-6-light: #D9D8E1FF;
+  --neutral-scale-7-light: #CFCDD8FF;
+  --neutral-scale-8-light: #BCBAC7FF;
+  --neutral-scale-9-light: #8E8C99FF;
+  --neutral-scale-10-light: #82808CFF;
+  --neutral-scale-11-light: #65636DFF;
+  --neutral-scale-12-light: #201F26FF;
+  --neutral-scale-alpha-1-light: #00005503;
+  --neutral-scale-alpha-2-light: #00008005;
+  --neutral-scale-alpha-3-light: #0000440F;
+  --neutral-scale-alpha-4-light: #0B004017;
+  --neutral-scale-alpha-5-light: #09003A1F;
+  --neutral-scale-alpha-6-light: #07003B26;
+  --neutral-scale-alpha-7-light: #0B003933;
+  --neutral-scale-alpha-8-light: #08003145;
+  --neutral-scale-alpha-9-light: #05001D73;
+  --neutral-scale-alpha-10-light: #05001980;
+  --neutral-scale-alpha-11-light: #0400119C;
+  --neutral-scale-alpha-12-light: #010008E0;
+  --surface-surface-secondary-light: #F0F0F4FF;
+  --success-scale-1-light: #F9FEFDFF;
+  --success-scale-2-light: #F2FBF9FF;
+  --success-scale-3-light: #DDF9F1FF;
+  --success-scale-4-light: #C8F4E9FF;
+  --success-scale-5-light: #B3ECDEFF;
+  --success-scale-6-light: #9CE0D0FF;
+  --success-scale-7-light: #7ECFBDFF;
+  --success-scale-8-light: #4BBBA5FF;
+  --success-scale-9-light: #86EAD4FF;
+  --success-scale-10-light: #7CE0CAFF;
+  --success-scale-11-light: #007867FF;
+  --success-scale-12-light: #17433AFF;
+  --success-scale-alpha-1-light: #00D5AA05;
+  --success-scale-alpha-2-light: #00B18A0D;
+  --success-scale-alpha-3-light: #00D29621;
+  --success-scale-alpha-4-light: #00CC9938;
+  --success-scale-alpha-5-light: #00C0914D;
+  --success-scale-alpha-6-light: #00B08663;
+  --success-scale-alpha-7-light: #00A17D82;
+  --success-scale-alpha-8-light: #009F80B5;
+  --success-scale-alpha-9-light: #00D3A578;
+  --success-scale-alpha-10-light: #00C39882;
+  --success-scale-alpha-11-light: #007867FF;
+  --success-scale-alpha-12-light: #003027E8;
+  --success-contrast-1-light: #062822FF;
+  --error-scale-1-light: #FFFCFCFF;
+  --error-scale-2-light: #FFF8F7FF;
+  --error-scale-3-light: #FEEBE7FF;
+  --error-scale-4-light: #FFDCD3FF;
+  --error-scale-5-light: #FFCDC1FF;
+  --error-scale-6-light: #FDBDAEFF;
+  --error-scale-7-light: #F5A997FF;
+  --error-scale-8-light: #EC8F7AFF;
+  --error-scale-9-light: #E54D2EFF;
+  --error-scale-10-light: #D73D1DFF;
+  --error-scale-11-light: #CF3716FF;
+  --error-scale-12-light: #5C281CFF;
+  --error-scale-alpha-1-light: #FF000003;
+  --error-scale-alpha-2-light: #FF200008;
+  --error-scale-alpha-3-light: #F52B0017;
+  --error-scale-alpha-4-light: #FF35002B;
+  --error-scale-alpha-5-light: #FF32003D;
+  --error-scale-alpha-6-light: #F9300052;
+  --error-scale-alpha-7-light: #E72D0069;
+  --error-scale-alpha-8-light: #DB290085;
+  --error-scale-alpha-9-light: #DF2600D1;
+  --error-scale-alpha-10-light: #D22400E3;
+  --error-scale-alpha-11-light: #CB2400E8;
+  --error-scale-alpha-12-light: #480E00E3;
+  --error-contrast-1-light: #FFFFFFFF;
+  --background-1-light: #FFFFFFFF;
+  --accessibility-1-light: #AA5B2FFF;
+  --border-surface-overlay-mode: #000000A6;
+  --border-text-default-mode: #201F26FF;
+  --border-text-on-surface-overlay-mode: #FFFFFFFF;
+  --border-icon-on-surface-overlay-mode: #FFFFFFFF;
+}
+
+ /* Aliases  */
+ :root {
+  --border-surface-base-default-mode: var(--background-1);
+  --border-surface-base-secondary-mode: var(--neutral-scale-2);
+  --border-surface-primary-mode: var(--brand-scale-2);
+  --border-surface-secondary-mode: var(--brand-scale-3);
+  --border-surface-shadow-mode: var(--neutral-scale-alpha-4);
+  --border-text-secondary-mode: var(--neutral-scale-11);
+  --border-text-link-mode: var(--accessibility-1);
+  --border-text-on-bg-primary-mode: var(--brand-contrast-1);
+  --border-text-on-bg-primary-subtle-mode: var(--brand-scale-11);
+  --border-text-on-bg-error-mode: var(--error-contrast-1);
+  --border-text-on-bg-error-subtle-mode: var(--error-scale-11);
+  --border-text-on-bg-success-mode: var(--success-contrast-1);
+  --border-text-on-bg-success-subtle-mode: var(--success-scale-11);
+  --border-icon-default-mode: var(--neutral-scale-12);
+  --border-icon-secondary-mode: var(--neutral-scale-11);
+  --border-icon-link-mode: var(--accessibility-1);
+  --border-icon-on-bg-primary-mode: var(--brand-contrast-1);
+  --border-icon-on-bg-primary-subtle-mode: var(--brand-scale-11);
+  --border-icon-on-bg-error-mode: var(--error-contrast-1);
+  --border-icon-on-bg-error-subtle-mode: var(--error-scale-11);
+  --border-icon-on-bg-success-mode: var(--success-contrast-1);
+  --border-icon-on-bg-success-subtle-mode: var(--success-scale-11);
+  --border-bg-primary-mode: var(--brand-scale-9);
+  --border-bg-primary-focus-mode: var(--brand-scale-10);
+  --border-bg-primary-subtle-mode: var(--brand-scale-3);
+  --border-bg-primary-subtle-focus-mode: var(--brand-scale-4);
+  --border-bg-primary-overlay-mode: var(--brand-scale-alpha-6);
+  --border-bg-error-mode: var(--error-scale-9);
+  --border-bg-error-focus-mode: var(--error-scale-10);
+  --border-bg-error-subtle-mode: var(--error-scale-3);
+  --border-bg-error-subtle-focus-mode: var(--error-scale-4);
+  --border-bg-success-mode: var(--success-scale-9);
+  --border-bg-success-focus-mode: var(--success-scale-10);
+  --border-bg-success-subtle-mode: var(--success-scale-3);
+  --border-bg-success-subtle-focus-mode: var(--success-scale-4);
+  --border-border-with-any-surface-mode: var(--neutral-scale-7);
+  --border-border-with-any-surface-focus-mode: var(--neutral-scale-8);
+  --border-border-with-bg-primary-mode: var(--brand-scale-11);
+  --border-border-with-bg-primary-subtle-mode: var(--brand-scale-8);
+  --border-border-with-bg-success-mode: var(--success-scale-11);
+  --border-border-with-bg-success-subtle-mode: var(--success-scale-8);
+  --border-border-with-bg-error-mode: var(--error-scale-11);
+  --border-border-with-bg-error-subtle-mode: var(--error-scale-8);
+}
+
+/* Color Styles  */
+ :root {
+  --black: #130C07FF;
+  --white: #FFFFFFFF;
+  --grey: #E4E2DFFF;
+}
+
+/* Effect Styles  */
+.xxsmall {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.xsmall {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.small {
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.06), 0px 4px 8px -2px rgba(0, 0, 0, 0.1);
+}
+
+.medium {
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.03), 0px 12px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+.large {
+  box-shadow: 0px 8px 8px -4px rgba(0, 0, 0, 0.03), 0px 20px 24px -4px rgba(0, 0, 0, 0.08);
+}
+
+.xlarge {
+  box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
+}
+
+.xxlarge {
+  box-shadow: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
+}
+
 
 /* 可选：深色主题（给 <html> 或 <body> 加 .theme-dark 即可切换） */
 .theme-dark {
@@ -256,6 +452,33 @@ html, body {
   to { transform: rotate(360deg); }
   }
 
+  /* Blob animation for hero section */
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
 
   /* 结束时淡出（可选） */
   @keyframes fadeOut {

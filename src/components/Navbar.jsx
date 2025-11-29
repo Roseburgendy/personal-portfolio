@@ -54,32 +54,11 @@ export const Navbar = ({ currentPage }) => {
 
             {/* 胶囊菜单 */}
             <div className="flex gap-6 items-center">
-              {/* Portfolio Dropdown */}
-              <div className="relative group">
-                <a href="#projects" className={navItemClass(currentPage === "portfolio")}>
-                  <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">PORTFOLIO</p>
-                </a>
-                {/* Dropdown */}
-                <div className="absolute top-full left-0 mt-2 py-2 bg-white/90 backdrop-blur-lg rounded-lg shadow-lg border border-gray-200/60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[160px]">
-                  <a href="#games" className="block px-4 py-2 text-[14px] text-[#201f26] hover:bg-gray-100/80 transition-colors">
-                    Game Projects
-                  </a>
-                  <a href="#art" className="block px-4 py-2 text-[14px] text-[#201f26] hover:bg-gray-100/80 transition-colors">
-                    Art Projects
-                  </a>
-                  <a href="#other" className="block px-4 py-2 text-[14px] text-[#201f26] hover:bg-gray-100/80 transition-colors">
-                    Other Projects
-                  </a>
-                </div>
-              </div>
+              <a href="#portfolio" className={navItemClass(currentPage === "portfolio")}>
+                <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">PORTFOLIO</p>
+              </a>
               <a href="#about" className={navItemClass(currentPage === "about")}>
                 <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">ABOUT</p>
-              </a>
-              <a href="#contact" className={navItemClass(currentPage === "contact")}>
-                <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">CONTACT</p>
-              </a>
-              <a href="/resume.pdf" className={navItemClass(false)}>
-                <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">RESUME</p>
               </a>
             </div>
           </div>
@@ -132,52 +111,19 @@ export const Navbar = ({ currentPage }) => {
                 className="overflow-hidden border-t border-gray-200/60"
               >
                 <div className="px-5 py-3 flex flex-col">
-                  <div className="py-3">
-                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26] opacity-70 mb-2">PORTFOLIO</p>
-                    <div className="pl-4 flex flex-col gap-2">
-                      <a
-                        href="#games"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="text-[12px] text-[#201f26] opacity-70 hover:opacity-100"
-                      >
-                        Games
-                      </a>
-                      <a
-                        href="#art"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="text-[12px] text-[#201f26] opacity-70 hover:opacity-100"
-                      >
-                        Art
-                      </a>
-                      <a
-                        href="#other"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="text-[12px] text-[#201f26] opacity-70 hover:opacity-100"
-                      >
-                        Other
-                      </a>
-                    </div>
-                  </div>
+                  <a
+                    href="#portfolio"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`py-3 ${currentPage === "portfolio" ? "opacity-100" : "opacity-70"} hover:opacity-100`}
+                  >
+                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]">PORTFOLIO</p>
+                  </a>
                   <a
                     href="#about"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`py-3 ${currentPage === "about" ? "opacity-100" : "opacity-70"} hover:opacity-100`}
                   >
                     <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]">ABOUT</p>
-                  </a>
-                  <a
-                    href="#contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="py-3 opacity-70 hover:opacity-100"
-                  >
-                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]">CONTACT</p>
-                  </a>
-                  <a
-                    href="/resume.pdf"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="py-3 opacity-70 hover:opacity-100"
-                  >
-                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]">RESUME</p>
                   </a>
                 </div>
               </motion.div>
