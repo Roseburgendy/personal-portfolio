@@ -8,7 +8,7 @@ export default defineConfig({
   base: "/personal-portfolio/",
   server: {
     host: '127.0.0.1',
-    port: 5178,
+    port: 3021,
     strictPort: true  
   }
 });

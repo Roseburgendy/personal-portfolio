@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { FlowerLoader} from "./FlowerLoader";
+import { FlowerLoader } from "./FlowerLoader";
+
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
   const fullText = "Welcome";
@@ -7,8 +8,8 @@ export const LoadingScreen = ({ onComplete }) => {
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
-      setText(fullText.substring(0, index));
       index++;
+      setText(fullText.substring(0, index));
 
       if (index > fullText.length) {
         clearInterval(interval);
@@ -19,17 +20,17 @@ export const LoadingScreen = ({ onComplete }) => {
     }, 100);
 
     return () => clearInterval(interval);
-  }, [onComplete]);
+  }, []); // Remove onComplete from dependencies
 
   return (
     <div
       className="fixed inset-0 z-50 flex flex-col items-center justify-center"
       style={{
-        background: "var(--bg)",   // ✅ 使用全局主题背景
-        color: "var(--text)",      // ✅ 使用全局文字色
+        background: "var(--bg)",
+        color: "var(--text)",
       }}
     >
-      {/* 打字动画 */}
+      {/* Typing animation */}
       <div
         className="mb-4 text-4xl font-bold"
         style={{ color: "var(--accent)" }}
@@ -38,7 +39,6 @@ export const LoadingScreen = ({ onComplete }) => {
       </div>
 
       <FlowerLoader spin petals={12} />
-      {/* 进度条 */}
     </div>
   );
 };

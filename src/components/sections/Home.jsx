@@ -76,7 +76,7 @@ export const Home = () => {
                 deliver experiences that brings warmth and joy.
               </p>
               <a href="#about" className="btn btn-secondary mt-6 inline-block">
-                More About Me 
+                More About Me
               </a>
             </div>
           </div>
