@@ -4,6 +4,7 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import profile from "../../assets/profile.jpg";
 import { featuredProjects } from "../../data/projects";
 import Lottie from "lottie-react";
+import { gsap } from "gsap";
 
 // 💡 put this OUTSIDE `export const Home = () => { ... }`
 const envelopeAnimation = {
@@ -97,10 +98,23 @@ const envelopeAnimation = {
   ]
 };
 
+// Sparkle animation URL from LottieFiles
+const sparkleAnimationUrl = "https://lottie.host/embed/d5cb3ab1-9cc0-4c1e-aa72-8e8c4f2e4c56/ZuPVjV8lw8.json";
+
 export const Home = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [isContactHovered, setIsContactHovered] = useState(false);
+  const [isHeroHovered, setIsHeroHovered] = useState(false);
+  const [sparkleAnimation, setSparkleAnimation] = useState(null);
+
+  // Refs for GSAP page transition
+  const pageRef = useRef(null);
+  const heroCardRef = useRef(null);
+  const profileCardRef = useRef(null);
+  const aboutCardRef = useRef(null);
+  const contactCardRef = useRef(null);
+  const projectCardRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -109,6 +123,51 @@ export const Home = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  // Load sparkle animation from URL
+  useEffect(() => {
+    fetch(sparkleAnimationUrl)
+      .then(response => response.json())
+      .then(data => setSparkleAnimation(data))
+      .catch(error => console.error('Error loading sparkle animation:', error));
+  }, []);
+
+  // GSAP Page Transition Animation
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Create timeline for page transition
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      // Fade in the entire page
+      tl.from(pageRef.current, {
+        opacity: 0,
+        duration: 0.5,
+      })
+      // Animate cards with stagger
+      .from([heroCardRef.current, profileCardRef.current], {
+        y: 80,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.8,
+        stagger: 0.15,
+      }, "-=0.3")
+      .from([contactCardRef.current], {
+        y: 80,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.8,
+        stagger: 0.15,
+      }, "-=0.6")
+      .from(projectCardRef.current, {
+        x: 100,
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.9,
+      }, "-=0.7");
+    }, pageRef);
+
+    return () => ctx.revert();
   }, []);
 
 
@@ -128,7 +187,7 @@ export const Home = () => {
 
 
   return (
-    <section id="home" className="min-h-screen py-32 relative overflow-hidden" style={{ background: "var(--bg)" }}>
+    <section ref={pageRef} id="home" className="min-h-screen py-32 relative overflow-hidden" style={{ background: "var(--bg)" }}>
 
       {/* Interactive Background Ball */}
       <motion.div
@@ -158,9 +217,7 @@ export const Home = () => {
 
               {/* Row 1: Hero Card (3/4) : Profile Photo (1/4) */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                ref={heroCardRef}
                 className="col-span-4 md:col-span-3 rounded-3xl p-8 shadow-xl relative overflow-hidden backdrop-blur-md border flex flex-col justify-center min-h-[280px]"
                 style={{
                   background: "rgba(255, 255, 255, 0.7)",
@@ -182,10 +239,7 @@ export const Home = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
+                ref={profileCardRef}
                 className="col-span-4 md:col-span-1 rounded-3xl p-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden backdrop-blur-md border h-[330px] md:min-h-[300px]"
                 style={{
                   background: "rgba(255, 255, 255, 0.7)",
@@ -202,10 +256,7 @@ export const Home = () => {
 
               {/* Row 2: Bio Card (1/2) : Contact Card (1/2) */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+                ref={aboutCardRef}
                 className="col-span-4 md:col-span-2 card card-hover rounded-3xl p-8 shadow-lg min-h-[280px]"
                 style={{
                   background: "rgba(255, 255, 255, 0.7)",
@@ -213,17 +264,17 @@ export const Home = () => {
                   boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.1)",
                 }}
               >
-                <p className="muted leading-relaxed text-sm">
+                <div className="relative z-10">
+                <p className="text-lgtext-sm">
                   I'm <strong style={{ color: "var(--text)" }}>Wang Ye</strong>, a multi-disciplinary passionate learner with a focus on game design and programming. I love blending design and technology to deliver experiences that bring warmth and joy.
                 </p>
+                </div>
+
               </motion.div>
 
               {/*Contact card*/}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
+                ref={contactCardRef}
                 className="col-span-4 md:col-span-2 rounded-3xl p-8 shadow-lg backdrop-blur-md border flex flex-col justify-center min-h-[280px] relative overflow-hidden"
                 style={{
                   background: "rgba(255, 255, 255, 0.7)",
@@ -233,21 +284,6 @@ export const Home = () => {
                 onMouseEnter={() => setIsContactHovered(true)}
                 onMouseLeave={() => setIsContactHovered(false)}
               >
-                {/* Lottie Animation */}
-                {isContactHovered && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    className="absolute top-4 right-4 w-20 h-20"
-                  >
-                    <Lottie
-                      animationData={envelopeAnimation}
-                      loop={true}
-                      autoplay={true}
-                    />
-                  </motion.div>
-                )}
 
                 <div className="relative z-10">
                   <h3 className="text-3xl font-bold mb-6" style={{ color: "var(--text)" }}>Contact Me</h3>
@@ -283,10 +319,7 @@ export const Home = () => {
 
             {/* Right Section - Featured Projects Card (1/3 width) */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.15 }}
+              ref={projectCardRef}
               className="col-span-1 rounded-3xl p-6 shadow-lg backdrop-blur-md border flex flex-col min-h-[580px] lg:min-h-0"
               style={{
                 background: "rgba(255, 255, 255, 0.7)",
