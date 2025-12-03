@@ -9,7 +9,7 @@ export const gameProjects = [
     teamSize: "6",
     duration: "4 Months",
     tech: "Löve2D (Lua)",
-    image: "src/assets/project_thumbnails/Project_HexgonWar_Chemical_Crisis.png",
+    image: "/media/thumbnails/hex_war.png",
     features: [
       "Hexagonal grid-based gameplay mechanics",
       "Multiplayer support for up to 4 players",
