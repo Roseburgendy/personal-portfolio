@@ -9,7 +9,7 @@ export const gameProjects = [
     teamSize: "6",
     duration: "4 Months",
     tech: "Löve2D (Lua)",
-    image: "/media/thumbnails/hex_war.png",
+    image: "/personal-portfolio/media/thumbnails/hex_war.png",
     features: [
       "Hexagonal grid-based gameplay mechanics",
       "Multiplayer support for up to 4 players",
@@ -24,15 +24,63 @@ export const gameProjects = [
       "Designed and balanced power-up system",
       "Created level layouts and tested game balance"
     ],
-    gallery: [
-      // Add more images here
-    ],
-    links: [
-      // { label: "Play Game", url: "#" },
-      // { label: "Source Code", url: "#" }
-    ]
+    gallery: [],
+    links: []
   },
-  // Add more game projects here
+  {
+    id: 2,
+    title: "Mystic Forest Adventure",
+    role: "Lead Programmer, Level Designer",
+    description: "An atmospheric 2D platformer adventure game featuring puzzle mechanics and exploration in a mystical forest setting.",
+    fullDescription: "Mystic Forest Adventure combines platforming challenges with environmental puzzles. Players navigate through enchanted forests, solving ancient riddles and discovering hidden secrets while uncovering the story of a forgotten civilization.",
+    teamSize: "4",
+    duration: "6 Months",
+    tech: "Unity (C#)",
+    image: "/personal-portfolio/media/thumbnails/hex_war.png",
+    features: [
+      "Physics-based puzzle mechanics",
+      "Hand-painted artistic environments",
+      "Original soundtrack with adaptive music",
+      "Multiple endings based on player choices",
+      "Collectible system with lore elements"
+    ],
+    responsibilities: [
+      "Developed core movement and physics systems",
+      "Designed and implemented 15+ unique levels",
+      "Created puzzle mechanics and interactions",
+      "Integrated audio system with dynamic triggers",
+      "Optimized performance for mobile platforms"
+    ],
+    gallery: [],
+    links: []
+  },
+  {
+    id: 3,
+    title: "Space Colony Simulator",
+    role: "Gameplay Programmer",
+    description: "A strategy simulation game where players build and manage colonies on distant planets, balancing resources and survival.",
+    fullDescription: "Space Colony Simulator challenges players to establish thriving settlements across the galaxy. Manage resources, research technologies, and ensure colonist happiness while dealing with environmental hazards and alien encounters.",
+    teamSize: "8",
+    duration: "8 Months",
+    tech: "Unity (C#)",
+    image: "/personal-portfolio/media/thumbnails/hex_war.png",
+    features: [
+      "Complex resource management systems",
+      "Procedurally generated planets",
+      "Tech tree with 50+ upgrades",
+      "Dynamic weather and event system",
+      "Multiplayer trading mechanics"
+    ],
+    responsibilities: [
+      "Implemented resource production chains",
+      "Developed colonist AI behavior systems",
+      "Created UI/UX for management interfaces",
+      "Balanced game economy and progression",
+      "Fixed bugs and optimized performance"
+    ],
+    gallery: [],
+    links: []
+  }
 ];
 
 // Art Projects
@@ -80,7 +128,7 @@ export const featuredProjects = [
     teamSize: "6",
     duration: "4 Months",
     tech: "Löve2D (Lua)",
-    image: "src/assets/project_thumbnails/Project_HexgonWar_Chemical_Crisis.png",
+    image: "/personal-portfolio/media/thumbnails/hex_war.png",
     features: [
       "Hexagonal grid-based gameplay mechanics",
       "Multiplayer support for up to 4 players",
@@ -108,7 +156,7 @@ export const featuredProjects = [
     teamSize: "6",
     duration: "4 Months",
     tech: "Löve2D (Lua)",
-    image: "src/assets/project_thumbnails/Project_HexgonWar_Chemical_Crisis.png",
+    image: "/personal-portfolio/media/thumbnails/hex_war.png",
     features: [
       "Hexagonal grid-based gameplay mechanics",
       "Multiplayer support for up to 4 players",

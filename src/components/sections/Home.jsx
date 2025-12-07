@@ -6,97 +6,6 @@ import { featuredProjects } from "../../data/projects";
 import Lottie from "lottie-react";
 import { gsap } from "gsap";
 
-// 💡 put this OUTSIDE `export const Home = () => { ... }`
-const envelopeAnimation = {
-  v: "5.5.7",
-  fr: 60,
-  ip: 0,
-  op: 90,
-  w: 512,
-  h: 512,
-  nm: "Mail",
-  ddd: 0,
-  assets: [],
-  layers: [
-    {
-      ddd: 0,
-      ind: 1,
-      ty: 4,
-      nm: "envelope",
-      sr: 1,
-      ks: {
-        o: { a: 0, k: 100 },
-        r: {
-          a: 1,
-          k: [
-            { t: 0, s: [0] },
-            { t: 30, s: [-5] },
-            { t: 60, s: [5] },
-            { t: 90, s: [0] }
-          ]
-        },
-        p: {
-          a: 1,
-          k: [
-            { t: 0, s: [256, 256, 0] },
-            { t: 45, s: [256, 226, 0] },
-            { t: 90, s: [256, 256, 0] }
-          ]
-        },
-        a: { a: 0, k: [0, 0, 0] },
-        s: {
-          a: 1,
-          k: [
-            { t: 0, s: [100, 100, 100] },
-            { t: 20, s: [105, 105, 100] },
-            { t: 40, s: [100, 100, 100] }
-          ]
-        }
-      },
-      ao: 0,
-      shapes: [
-        {
-          ty: "gr",
-          it: [
-            {
-              ty: "rc",
-              d: 1,
-              s: { a: 0, k: [140, 100] },
-              p: { a: 0, k: [0, 0] },
-              r: { a: 0, k: 8 }
-            },
-            {
-              ty: "st",
-              c: { a: 0, k: [0.871, 0.369, 0.106, 1] },
-              o: { a: 0, k: 100 },
-              w: { a: 0, k: 3 }
-            },
-            {
-              ty: "fl",
-              c: { a: 0, k: [0.988, 0.922, 0.894, 1] },
-              o: { a: 0, k: 100 }
-            },
-            {
-              // transform for the group (important for Lottie)
-              ty: "tr",
-              p: { a: 0, k: [0, 0] },
-              a: { a: 0, k: [0, 0] },
-              s: { a: 0, k: [100, 100] },
-              r: { a: 0, k: 0 },
-              o: { a: 0, k: 100 },
-              sk: { a: 0, k: 0 },
-              sa: { a: 0, k: 0 }
-            }
-          ],
-          nm: "Envelope Body"
-        }
-      ],
-      ip: 0,
-      op: 90,
-      st: 0
-    }
-  ]
-};
 
 // Sparkle animation URL from LottieFiles
 const sparkleAnimationUrl = "https://lottie.host/embed/d5cb3ab1-9cc0-4c1e-aa72-8e8c4f2e4c56/ZuPVjV8lw8.json";
@@ -187,13 +96,21 @@ export const Home = () => {
 
 
   return (
-    <section ref={pageRef} id="home" className="min-h-screen py-32 relative overflow-hidden" style={{ background: "var(--bg)" }}>
+    <section
+      ref={pageRef}
+      id="home"
+      className="min-h-screen py-32 relative overflow-hidden" 
+    >
+        {/* Decorative blobs */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
 
       {/* Interactive Background Ball */}
       <motion.div
         className="pointer-events-none fixed w-96 h-96 rounded-full blur-3xl opacity-30 z-0"
         style={{
-          background: "radial-gradient(circle, var(--accent) 0%, transparent 70%)",
+          background: "radial-gradient(circle, var(--accent) 0%, transparent 100%)",
         }}
         animate={{
           x: mousePosition.x - 192,
@@ -218,12 +135,7 @@ export const Home = () => {
               {/* Row 1: Hero Card (3/4) : Profile Photo (1/4) */}
               <motion.div
                 ref={heroCardRef}
-                className="col-span-4 md:col-span-3 rounded-3xl p-8 shadow-xl relative overflow-hidden backdrop-blur-md border flex flex-col justify-center min-h-[280px]"
-                style={{
-                  background: "rgba(255, 255, 255, 0.7)",
-                  borderColor: "rgba(255, 255, 255, 0.85)",
-                  boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.1)",
-                }}
+                className="col-span-4 md:col-span-3 card-glass-gradient rounded-3xl p-8 relative overflow-hidden flex flex-col justify-center min-h-[280px]"
               >
                 <div className="relative z-10">
                   <div className="mb-4">
@@ -240,12 +152,7 @@ export const Home = () => {
 
               <motion.div
                 ref={profileCardRef}
-                className="col-span-4 md:col-span-1 rounded-3xl p-0 shadow-lg hover:shadow-xl transition-shadow overflow-hidden backdrop-blur-md border h-[330px] md:min-h-[300px]"
-                style={{
-                  background: "rgba(255, 255, 255, 0.7)",
-                  borderColor: "rgba(255, 255, 255, 0.85)",
-                  boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.1)",
-                }}
+                className="col-span-4 md:col-span-1 card-glass rounded-3xl p-0 hover:shadow-xl transition-shadow overflow-hidden h-[330px] md:min-h-[300px]"
               >
                 <img
                   src={profile}
@@ -257,12 +164,7 @@ export const Home = () => {
               {/* Row 2: Bio Card (1/2) : Contact Card (1/2) */}
               <motion.div
                 ref={aboutCardRef}
-                className="col-span-4 md:col-span-2 card card-hover rounded-3xl p-8 shadow-lg min-h-[280px]"
-                style={{
-                  background: "rgba(255, 255, 255, 0.7)",
-                  borderColor: "rgba(255, 255, 255, 0.85)",
-                  boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.1)",
-                }}
+                className="col-span-4 md:col-span-2 card-glass rounded-3xl p-8 min-h-[280px]"
               >
                 <div className="relative z-10">
                 <p className="text-lgtext-sm">
@@ -275,12 +177,7 @@ export const Home = () => {
               {/*Contact card*/}
               <motion.div
                 ref={contactCardRef}
-                className="col-span-4 md:col-span-2 rounded-3xl p-8 shadow-lg backdrop-blur-md border flex flex-col justify-center min-h-[280px] relative overflow-hidden"
-                style={{
-                  background: "rgba(255, 255, 255, 0.7)",
-                  borderColor: "rgba(255, 255, 255, 0.85)",
-                  boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.1)",
-                }}
+                className="col-span-4 md:col-span-2 card-glass rounded-3xl p-8 flex flex-col justify-center min-h-[280px] relative overflow-hidden"
                 onMouseEnter={() => setIsContactHovered(true)}
                 onMouseLeave={() => setIsContactHovered(false)}
               >
@@ -320,11 +217,7 @@ export const Home = () => {
             {/* Right Section - Featured Projects Card (1/3 width) */}
             <motion.div
               ref={projectCardRef}
-              className="col-span-1 rounded-3xl p-6 shadow-lg backdrop-blur-md border flex flex-col min-h-[580px] lg:min-h-0"
-              style={{
-                background: "rgba(255, 255, 255, 0.7)",
-                borderColor: "rgba(255, 255, 255, 0.85)",
-              }}
+              className="col-span-1 card-glass rounded-3xl p-6 flex flex-col min-h-[580px] lg:min-h-0"
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold" style={{ color: "var(--text)" }}>

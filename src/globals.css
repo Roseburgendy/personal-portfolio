@@ -132,7 +132,21 @@
   --border-text-on-surface-overlay-mode: #FFFFFFFF;
   --border-icon-on-surface-overlay-mode: #FFFFFFFF;
 }
-
+/* secondary */
+:root {
+  /* Mode 1 */
+  /* color */
+  --secondary-100: #eaf1f4;
+  --secondary-200: #dae6eb;
+  --secondary-300: #cadbe2;
+  --secondary-400: #b9d0da;
+  --secondary-50: #fbfcfd;
+  --secondary-500: #a9c5d1;
+  --secondary-600: #879ea7;
+  --secondary-700: #65767d;
+  --secondary-800: #444f54;
+  --secondary-900: #22272a;
+}
  /* Aliases  */
  :root {
   --border-surface-base-default-mode: var(--background-1);
@@ -307,6 +321,22 @@ html, body {
   .card-lg { @apply p-8; }
   .card-hover:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
   .card-border-hover:hover { border-color: var(--accent-600); }
+
+  /* Glass morphism card style */
+  .card-glass {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255,255,255,0.85);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+    .card-glass-gradient {
+    background: linear-gradient(180deg, var(--brand-scale-3-light), rgba(255, 255, 255, 0.7));
+    border: 1px solid rgba(255,255,255,0.85);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 
   /* 技术标签 */
   .tag {

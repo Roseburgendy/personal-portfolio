@@ -43,36 +43,17 @@ export const Portfolio = () => {
       <Navbar currentPage="portfolio" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50"></div>
-
-        {/* Decorative blobs */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      <section className="relative pt-32 pb-0 overflow-hidden">
 
         <RevealOnScroll>
           <div className="relative max-w-7xl mx-auto px-4 text-center">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
               Portfolio
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
               Explore my creative journey through games, art, and innovative projects
             </p>
 
-            {/* Category pills preview */}
-            <div className="flex flex-wrap justify-center gap-4 mt-12">
-              {categories.map((category) => (
-                <div
-                  key={category.id}
-                  className="flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-md border border-gray-200"
-                >
-                  <span className="text-2xl">{category.icon}</span>
-                  <span className="font-semibold text-gray-700">{category.title}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </RevealOnScroll>
       </section>
