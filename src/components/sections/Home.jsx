@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { ProjectCard } from "../ProjectCard";
 import { Footer } from "../Footer";
-import profile from "../../assets/profile.jpg";
+import profile from "../../assets/profile.webp";
 import { featuredProjects, gameProjects, artProjects, otherProjects } from "../../data/projects";
 import Lottie from "lottie-react";
 import { gsap } from "gsap";
@@ -411,7 +411,7 @@ export const Home = () => {
             {/* Section Title and Tab Switcher - Same Line */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-6">
               {/* Section Title - Left */}
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Projects</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">All Projects</h2>
 
               {/* Tab Switcher - Center/Right with Glassmorphism */}
               <div className="flex justify-center md:justify-center md:flex-1">

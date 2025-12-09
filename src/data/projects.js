@@ -2,6 +2,7 @@
 export const gameProjects = [
   {
     id: 1,
+    slug: "hexagonal-war", // Unique slug for routing
     title: "Hexagonal War: Chemical Crisis",
     role: "Game Designer, Project Manager",
     description: "A Bomberman clone made in Lua using the Löve2D framework, that my classmate David Bång and I worked on while studying at FutureGames.",
@@ -9,7 +10,7 @@ export const gameProjects = [
     teamSize: "6",
     duration: "4 Months",
     tech: "Löve2D (Lua)",
-    image: "/personal-portfolio/media/thumbnails/hex_war.png",
+    image: "/personal-portfolio/media/thumbnails/hex_war.webp",
     features: [
       "Hexagonal grid-based gameplay mechanics",
       "Multiplayer support for up to 4 players",
@@ -29,6 +30,7 @@ export const gameProjects = [
   },
   {
     id: 2,
+    slug: "mystic-forest", // Unique slug for routing
     title: "Mystic Forest Adventure",
     role: "Lead Programmer, Level Designer",
     description: "An atmospheric 2D platformer adventure game featuring puzzle mechanics and exploration in a mystical forest setting.",
@@ -56,6 +58,7 @@ export const gameProjects = [
   },
   {
     id: 3,
+    slug: "space-colony", // Unique slug for routing
     title: "Space Colony Simulator",
     role: "Gameplay Programmer",
     description: "A strategy simulation game where players build and manage colonies on distant planets, balancing resources and survival.",
@@ -121,6 +124,7 @@ export const otherProjects = [
 export const featuredProjects = [
   {
     id: 1,
+    slug: "hexagonal-war", // Unique slug for routing
     title: "Hexagonal War: Chemical Crisis",
     role: "Game Designer, Project Manager",
     description: "This project is a Bomberman clone made in Lua using the Löve2D framework, that my classmate David Bång and I worked on while studying at FutureGames.",
@@ -128,7 +132,7 @@ export const featuredProjects = [
     teamSize: "6",
     duration: "4 Months",
     tech: "Löve2D (Lua)",
-    image: "/personal-portfolio/media/thumbnails/hex_war.png",
+    image: "/personal-portfolio/media/thumbnails/hex_war.webp",
     features: [
       "Hexagonal grid-based gameplay mechanics",
       "Multiplayer support for up to 4 players",
@@ -149,6 +153,7 @@ export const featuredProjects = [
 
     {
     id: 2,
+    slug: "mystic-forest-featured", // Unique slug for routing (different from gameProjects to avoid conflicts)
     title: "Hexagonal War: Chemical Crisis",
     role: "Game Designer, Project Manager",
     description: "This project is a Bomberman clone made in Lua using the Löve2D framework, that my classmate David Bång and I worked on while studying at FutureGames.",

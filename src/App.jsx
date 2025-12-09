@@ -10,6 +10,9 @@ import { Footer } from "./components/Footer";
 import { Portfolio } from "./pages/Portfolio";
 import { About } from "./pages/About";
 import { ProjectDetail } from "./pages/ProjectDetail";
+import { getProjectDetailComponent } from "./pages/projects";
+import { BaseProjectDetail } from "./pages/projects/BaseProjectDetail";
+import { gameProjects, artProjects, otherProjects, featuredProjects } from "./data/projects";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -33,10 +36,33 @@ function App() {
   }, []);
 
   const renderPage = () => {
-    // Check if it's a project detail page
+    // Check if it's a project detail page with slug
     if (currentPage.startsWith("project/")) {
-      const projectId = currentPage.replace("project/", "");
-      return <ProjectDetail projectId={projectId} />;
+      const slug = currentPage.replace("project/", "");
+
+      // Try to find a custom project detail component
+      const CustomProjectComponent = getProjectDetailComponent(slug);
+
+      if (CustomProjectComponent) {
+        // Use custom project detail page
+        return <CustomProjectComponent />;
+      } else {
+        // Fall back to BaseProjectDetail with project data
+        const allProjects = [
+          ...gameProjects,
+          ...artProjects,
+          ...otherProjects,
+          ...featuredProjects
+        ];
+        const project = allProjects.find(p => p.slug === slug);
+
+        if (project) {
+          return <BaseProjectDetail project={project} />;
+        } else {
+          // Project not found, show old ProjectDetail for backward compatibility
+          return <ProjectDetail projectId={slug} />;
+        }
+      }
     }
 
     switch (currentPage) {
