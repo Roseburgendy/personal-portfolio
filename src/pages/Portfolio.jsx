@@ -39,26 +39,16 @@ export const Portfolio = () => {
   const activeCategory = categories.find(cat => cat.id === activeTab);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen"
+    style={{ background: "linear-gradient(135deg, var(--bg) 0%, var(--brand-scale-1-light) 50%, var(--brand-scale-3-light) 100%)" }}>
       <Navbar currentPage="portfolio" />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-0 overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+      <div className="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
 
-        <RevealOnScroll>
-          <div className="relative max-w-7xl mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Portfolio
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Explore my creative journey through games, art, and innovative projects
-            </p>
-
-          </div>
-        </RevealOnScroll>
-      </section>
-
-      <section className="section section-pad pb-20">
+      <section className="pt-32 pb-20 px-4 md:px-8">
         <RevealOnScroll>
           <div className="max-w-7xl mx-auto px-4">
 

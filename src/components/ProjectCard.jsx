@@ -5,61 +5,67 @@ export const ProjectCard = ({ project, categoryPrefix = "" }) => {
   return (
     <a
       href={projectLink}
-      className="group block"
+      className="group rounded-3xl bg-[#F5EDE3] hover:shadow-2xl transition-all duration-300 h-full flex flex-col"
     >
-      <div className="space-y-4">
-        {/* Image Card with overlay badges */}
-        <div className="bg-white rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-xl border border-gray-200">
-          <div className="relative aspect-[16/10] overflow-hidden">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
+      {/* Image with hover overlay - with padding for margin effect */}
+      <div className="p-6 pb-0">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />
 
-            {/* Overlay badges */}
-            <div className="absolute bottom-0 left-0 right-0 p-3 flex items-center gap-2 text-white text-xs">
-              <div className="flex items-center gap-1.5 bg-black/50 backdrop-blur-sm px-2.5 py-1.5 rounded-full">
-                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+          {/* Hover Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {/* Tags at bottom left */}
+            <div className="absolute bottom-6 left-6 flex flex-wrap gap-2">
+              <span className="px-4 py-2 bg-[#E8D5C4] text-[#5C4033] text-xs font-semibold rounded-full uppercase tracking-wider">
+                {project.tech}
+              </span>
+              <span className="px-4 py-2 bg-[#E8D5C4] text-[#5C4033] text-xs font-semibold rounded-full uppercase tracking-wider">
+                {project.role.split(',')[0].trim()}
+              </span>
+            </div>
+
+            {/* Arrow button at bottom right */}
+            <div className="absolute bottom-6 right-6">
+              <div className="w-14 h-14 bg-[var(--accent-600)] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                  />
                 </svg>
-                <span>{project.teamSize}</span>
-              </div>
-              <div className="flex items-center gap-1.5 bg-black/50 backdrop-blur-sm px-2.5 py-1.5 rounded-full">
-                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                </svg>
-                <span>{project.duration}</span>
-              </div>
-              <div className="flex items-center gap-1.5 bg-black/50 backdrop-blur-sm px-2.5 py-1.5 rounded-full">
-                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-                <span>{project.tech}</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Content outside the card */}
-        <div>
-          {/* Title */}
-          <div className="flex items-start justify-between gap-4 mb-2">
-            <h3 className="text-2xl font-bold text-gray-900 leading-tight">
-              {project.title}
-            </h3>
-          </div>
-
-          {/* Role */}
-          <p className="text-gray-600 text-base mb-3">
-            {project.role}
-          </p>
-
-          {/* Description */}
-          <p className="text-gray-700 text-sm leading-relaxed">
-            {project.description}
-          </p>
+      {/* Content section */}
+      <div className="p-6 pt-4 space-y-3 flex-1 flex flex-col">
+        {/* Year tag */}
+        <div className="text-[var(--accent-600)] text-sm font-bold tracking-wider">
+          {project.year || "2025"}
         </div>
+
+        {/* Title */}
+        <h3 className="text-2xl md:text-3xl font-bold text-[#5C4033] leading-tight">
+          {project.title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-700 text-sm leading-relaxed flex-1">
+          {project.description}
+        </p>
       </div>
     </a>
   );

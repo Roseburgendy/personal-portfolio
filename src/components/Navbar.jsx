@@ -36,6 +36,26 @@ export const Navbar = ({ currentPage }) => {
     boxShadow: "0 8px 32px 0 rgba(0,0,0,0.10)",
   };
 
+  const scrollToProjectsSection = () => {
+    // If on home page, scroll to projects section
+    if (window.location.hash === "" || window.location.hash === "#home") {
+      const projectsSection = document.getElementById('projects-section');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // Navigate to home page first, then scroll
+      window.location.hash = 'home';
+      setTimeout(() => {
+        const projectsSection = document.getElementById('projects-section');
+        if (projectsSection) {
+          projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+    setMobileMenuOpen(false);
+  };
+
   return (
     <>
       {/* Desktop 玻璃态居中胶囊 */}
@@ -54,9 +74,12 @@ export const Navbar = ({ currentPage }) => {
 
             {/* 胶囊菜单 */}
             <div className="flex gap-6 items-center">
-              <a href="#portfolio" className={navItemClass(currentPage === "portfolio")}>
+              <button
+                onClick={scrollToProjectsSection}
+                className={navItemClass(currentPage === "portfolio")}
+              >
                 <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">PORTFOLIO</p>
-              </a>
+              </button>
               <a href="#about" className={navItemClass(currentPage === "about")}>
                 <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">ABOUT</p>
               </a>
@@ -111,13 +134,12 @@ export const Navbar = ({ currentPage }) => {
                 className="overflow-hidden border-t border-gray-200/60"
               >
                 <div className="px-5 py-3 flex flex-col">
-                  <a
-                    href="#portfolio"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`py-3 ${currentPage === "portfolio" ? "opacity-100" : "opacity-70"} hover:opacity-100`}
+                  <button
+                    onClick={scrollToProjectsSection}
+                    className={`py-3 w-full text-left ${currentPage === "portfolio" ? "opacity-100" : "opacity-70"} hover:opacity-100`}
                   >
                     <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]">PORTFOLIO</p>
-                  </a>
+                  </button>
                   <a
                     href="#about"
                     onClick={() => setMobileMenuOpen(false)}

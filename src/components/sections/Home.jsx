@@ -1,8 +1,10 @@
-import { color, motion } from "framer-motion";
+import { color, motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { ProjectCard } from "../ProjectCard";
+import { Footer } from "../Footer";
 import profile from "../../assets/profile.jpg";
-import { featuredProjects } from "../../data/projects";
+import { featuredProjects, gameProjects, artProjects, otherProjects } from "../../data/projects";
 import Lottie from "lottie-react";
 import { gsap } from "gsap";
 
@@ -16,6 +18,7 @@ export const Home = () => {
   const [isContactHovered, setIsContactHovered] = useState(false);
   const [isHeroHovered, setIsHeroHovered] = useState(false);
   const [sparkleAnimation, setSparkleAnimation] = useState(null);
+  const [activeTab, setActiveTab] = useState("games");
 
   // Refs for GSAP page transition
   const pageRef = useRef(null);
@@ -79,6 +82,16 @@ export const Home = () => {
     return () => ctx.revert();
   }, []);
 
+  // Listen for custom event from Navbar to change project tab
+  useEffect(() => {
+    const handleSetProjectTab = (event) => {
+      setActiveTab(event.detail);
+    };
+
+    window.addEventListener('setProjectTab', handleSetProjectTab);
+    return () => window.removeEventListener('setProjectTab', handleSetProjectTab);
+  }, []);
+
 
   const nextProject = () => {
     setCurrentProjectIndex((prev) =>
@@ -94,6 +107,39 @@ export const Home = () => {
 
   const currentProject = featuredProjects[currentProjectIndex];
 
+  const categories = [
+    {
+      id: "games",
+      title: "Games",
+      color: "from-purple-100 to-pink-100",
+      projects: gameProjects,
+      description: "Interactive game development projects"
+    },
+    {
+      id: "art",
+      title: "Art",
+      color: "from-blue-500 to-cyan-500",
+      projects: artProjects,
+      description: "Creative artworks and visual design"
+    },
+    {
+      id: "other",
+      title: "Other",
+      color: "from-green-500 to-emerald-500",
+      projects: otherProjects,
+      description: "Web development, tools, and experiments"
+    }
+  ];
+
+  const activeCategory = categories.find(cat => cat.id === activeTab);
+
+  const scrollToProjects = (categoryId) => {
+    setActiveTab(categoryId);
+    const projectsSection = document.getElementById('projects-section');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <section
@@ -340,9 +386,9 @@ export const Home = () => {
               </div>
 
               {/* View All Link */}
-              <a
-                href="#portfolio"
-                className="mt-4 text-center py-3 px-4 rounded-xl font-semibold transition-all hover:shadow-md"
+              <button
+                onClick={() => scrollToProjects('games')}
+                className="mt-4 text-center py-3 px-4 rounded-xl font-semibold transition-all hover:shadow-md w-full"
                 style={{
                   background: "rgba(248, 138, 79, 0.1)",
                   color: "var(--accent-600)",
@@ -350,12 +396,95 @@ export const Home = () => {
                 }}
               >
                 View All Projects →
-              </a>
+              </button>
             </motion.div>
 
           </div>
         </RevealOnScroll>
       </div>
+
+      {/* Projects Section */}
+      <div id="projects-section" className="max-w-7xl mx-auto px-4 relative z-10 mt-20">
+        <RevealOnScroll>
+          <div className="max-w-7xl mx-auto">
+
+            {/* Section Title and Tab Switcher - Same Line */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-6">
+              {/* Section Title - Left */}
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Projects</h2>
+
+              {/* Tab Switcher - Center/Right with Glassmorphism */}
+              <div className="flex justify-center md:justify-center md:flex-1">
+                <div
+                  className="inline-flex gap-2 rounded-full px-2 py-2"
+                  style={{
+                    background: "rgba(255,255,255,0.7)",
+                    backdropFilter: "blur(20px)",
+                    WebkitBackdropFilter: "blur(20px)",
+                    border: "1px solid rgba(255,255,255,0.85)",
+                    boxShadow: "0 8px 32px 0 rgba(0,0,0,0.10)",
+                  }}
+                >
+                  {/* Tab buttons */}
+                  {categories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => setActiveTab(category.id)}
+                      className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 ${
+                        activeTab === category.id
+                          ? "bg-[var(--accent-600)] text-white"
+                          : "text-[#201f26] opacity-60 hover:opacity-100"
+                      }`}
+                    >
+                      <span className="text-sm tracking-[1.8px]">{category.title.toUpperCase()}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Projects Grid */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                {activeCategory.projects.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {activeCategory.projects.map((project, index) => (
+                      <motion.div
+                        key={project.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex"
+                      >
+                        <ProjectCard project={project} categoryPrefix="" />
+                      </motion.div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-20">
+                    <div className="text-6xl mb-4">{activeCategory.icon}</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Coming Soon
+                    </h3>
+                    <p className="text-gray-600">
+                      {activeCategory.title} projects will be added here soon.
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </RevealOnScroll>
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </section>
   );
 };
