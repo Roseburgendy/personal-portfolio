@@ -27,32 +27,6 @@ export const About = () => {
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
-  const skills = [
-    { name: 'React', category: 'Frontend' },
-    { name: 'Unity', category: 'Game Dev' },
-    { name: 'C#', category: 'Programming' },
-    { name: 'TypeScript', category: 'Programming' },
-    { name: 'TailwindCSS', category: 'Frontend' },
-    { name: 'Figma', category: 'Design' },
-    { name: 'Git', category: 'Tools' },
-    { name: 'Lua', category: 'Game Dev' }
-  ]
-
-  const expertise = [
-    'UI/UX Design',
-    'Web Design',
-    'Game Development',
-    'Frontend Development',
-    'Digital Art',
-    'Copywriting'
-  ]
-
-  const socialLinks = [
-    { name: 'Website', url: 'msync.univer.se', icon: '🌐' },
-    { name: 'LinkedIn', url: 'linkedin.com/company/msync', icon: '💼' },
-    { name: 'Dribbble', url: 'dribbble.com/msync', icon: '🎨' }
-  ]
-
   return (
     <div
       className='min-h-screen'
@@ -98,7 +72,7 @@ export const About = () => {
                   {/* Profile Image - fills entire container */}
                   <img
                     src={profile}
-                    alt='Wang Ye'
+                    alt='Wang Ye(王晔)'
                     className='w-full h-full object-cover absolute inset-0'
                   />
 
@@ -117,7 +91,7 @@ export const About = () => {
                       className='text-2xl md:text-3xl font-bold mb-2'
                       style={{ color: 'var(--text)' }}
                     >
-                      Wang Ye
+                      Wang Ye(王晔)
                     </h1>
                   </div>
                 </div>
@@ -169,7 +143,7 @@ export const About = () => {
                     >
                       {/* Title + Arrow */}
                       <div className='flex items-start justify-between'>
-                        <h3 className='text-lg  font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white'>
+                        <h3 className='text-lg  font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
                           View
                         </h3>
 
@@ -187,7 +161,7 @@ export const About = () => {
                           <FileText className='w-5 h-5 text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' />
                         </div>
 
-                        <span className='text-lg font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white'>
+                        <span className='text-lg font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
                           Resume
                         </span>
                       </div>
@@ -210,7 +184,7 @@ export const About = () => {
                     >
                       {/* Title + Arrow */}
                       <div className='flex items-start justify-between'>
-                        <h3 className='text-lg  font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white'>
+                        <h3 className='text-lg  font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
                           Follow
                         </h3>
 
@@ -228,7 +202,7 @@ export const About = () => {
                           <FaInstagram className='w-5 h-5 text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' />
                         </div>
 
-                        <span className='text-lg font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white'>
+                        <span className='text-lg font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
                           Instagram
                         </span>
                       </div>
@@ -251,7 +225,7 @@ export const About = () => {
                     >
                       {/* Title + Arrow */}
                       <div className='flex items-start justify-between'>
-                        <h3 className='text-lg  font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white'>
+                        <h3 className='text-lg  font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
                           Connect
                         </h3>
 
@@ -269,7 +243,7 @@ export const About = () => {
                           <FaLinkedin className='w-5 h-5 text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' />
                         </div>
 
-                        <span className='text-lg font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white'>
+                        <span className='text-lg font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
                           LinkedIn
                         </span>
                       </div>

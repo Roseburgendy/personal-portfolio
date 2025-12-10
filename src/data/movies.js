@@ -23,5 +23,13 @@ export const movies = [
   {
     title: "Perfect Days",
     poster: "/personal-portfolio/media/movies/mov_perfect.webp"
+  },
+    {
+    title: "Normal People",
+    poster: "/personal-portfolio/media/movies/mov_normal.webp"
+  },
+  {
+    title: "Little Forest",
+    poster: "/personal-portfolio/media/movies/mov_little_forest.webp"
   }
 ];

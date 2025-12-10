@@ -41,7 +41,23 @@ export const games = [
     cover: "/personal-portfolio/media/games/game_nightmare.webp"
   },
   {
-    title: "No Man's Land",
+    title: "No Man's Sky",
     cover: "/personal-portfolio/media/games/game_noman.webp"
+  },
+  {
+    title: "Sky",
+    cover: "/personal-portfolio/media/games/game_sky.webp"
+  },
+  {
+    title: "Journey",
+    cover: "/personal-portfolio/media/games/game_journey.webp"
+  },
+    {
+    title: "Flower",
+    cover: "/personal-portfolio/media/games/game_flower.webp"
+  },
+      {
+    title: "Gogh",
+    cover: "/personal-portfolio/media/games/game_gogh.webp"
   }
 ];

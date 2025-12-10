@@ -253,7 +253,14 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
+  font-family: "Open Sans", sans-serif; /* Content font for better readability */
+  line-height: 1.6; /* Improved line spacing for readability */
+}
+
+/* Use Montserrat for headings */
+h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
 }
 
 /* ========== 抽象出来的组件样式 ========== */

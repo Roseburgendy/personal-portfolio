@@ -1,12 +1,12 @@
 import { color, motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { StaggerReveal } from "../StaggerReveal";
 import { ProjectCard } from "../ProjectCard";
 import { Footer } from "../Footer";
 import profile from "../../assets/profile.webp";
 import { featuredProjects, gameProjects, artProjects, otherProjects } from "../../data/projects";
 import Lottie from "lottie-react";
-import { gsap } from "gsap";
 
 
 // Sparkle animation URL from LottieFiles
@@ -19,14 +19,6 @@ export const Home = () => {
   const [isHeroHovered, setIsHeroHovered] = useState(false);
   const [sparkleAnimation, setSparkleAnimation] = useState(null);
   const [activeTab, setActiveTab] = useState("games");
-
-  // Refs for GSAP page transition
-  const pageRef = useRef(null);
-  const heroCardRef = useRef(null);
-  const profileCardRef = useRef(null);
-  const aboutCardRef = useRef(null);
-  const contactCardRef = useRef(null);
-  const projectCardRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -43,43 +35,6 @@ export const Home = () => {
       .then(response => response.json())
       .then(data => setSparkleAnimation(data))
       .catch(error => console.error('Error loading sparkle animation:', error));
-  }, []);
-
-  // GSAP Page Transition Animation
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Create timeline for page transition
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-      // Fade in the entire page
-      tl.from(pageRef.current, {
-        opacity: 0,
-        duration: 0.5,
-      })
-      // Animate cards with stagger
-      .from([heroCardRef.current, profileCardRef.current], {
-        y: 80,
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.8,
-        stagger: 0.15,
-      }, "-=0.3")
-      .from([contactCardRef.current], {
-        y: 80,
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.8,
-        stagger: 0.15,
-      }, "-=0.6")
-      .from(projectCardRef.current, {
-        x: 100,
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.9,
-      }, "-=0.7");
-    }, pageRef);
-
-    return () => ctx.revert();
   }, []);
 
   // Listen for custom event from Navbar to change project tab
@@ -143,9 +98,8 @@ export const Home = () => {
 
   return (
     <section
-      ref={pageRef}
       id="home"
-      className="min-h-screen py-32 relative overflow-hidden" 
+      className="min-h-screen py-32 relative overflow-hidden"
     >
         {/* Decorative blobs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -171,7 +125,7 @@ export const Home = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <RevealOnScroll>
+        <StaggerReveal staggerDelay={150}>
           {/* Main Layout: 2:1 ratio (Info Cards : Project Card) */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
@@ -179,9 +133,8 @@ export const Home = () => {
             <div className="lg:col-span-2 grid grid-cols-4 gap-4">
 
               {/* Row 1: Hero Card (3/4) : Profile Photo (1/4) */}
-              <motion.div
-                ref={heroCardRef}
-                className="col-span-4 md:col-span-3 card-glass-gradient rounded-3xl p-8 relative overflow-hidden flex flex-col justify-center min-h-[280px]"
+              <div
+                className="stagger-item col-span-4 md:col-span-3 card-glass-gradient rounded-3xl p-8 relative overflow-hidden flex flex-col justify-center min-h-[280px]"
               >
                 <div className="relative z-10">
                   <div className="mb-4">
@@ -194,23 +147,21 @@ export const Home = () => {
                     Game Programmer with a <strong>Creative</strong> Heart
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                ref={profileCardRef}
-                className="col-span-4 md:col-span-1 card-glass rounded-3xl p-0 hover:shadow-xl transition-shadow overflow-hidden h-[330px] md:min-h-[300px]"
+              <div
+                className="stagger-item col-span-4 md:col-span-1 card-glass rounded-3xl p-0 hover:shadow-xl transition-shadow overflow-hidden h-[330px] md:min-h-[300px]"
               >
                 <img
                   src={profile}
                   alt="Wang Ye"
                   className="w-full h-full object-cover"
                 />
-              </motion.div>
+              </div>
 
               {/* Row 2: Bio Card (1/2) : Contact Card (1/2) */}
-              <motion.div
-                ref={aboutCardRef}
-                className="col-span-4 md:col-span-2 card-glass rounded-3xl p-8 min-h-[280px]"
+              <div
+                className="stagger-item col-span-4 md:col-span-2 card-glass rounded-3xl p-8 min-h-[280px]"
               >
                 <div className="relative z-10">
                 <p className="text-lgtext-sm">
@@ -218,12 +169,11 @@ export const Home = () => {
                 </p>
                 </div>
 
-              </motion.div>
+              </div>
 
               {/*Contact card*/}
-              <motion.div
-                ref={contactCardRef}
-                className="col-span-4 md:col-span-2 card-glass rounded-3xl p-8 flex flex-col justify-center min-h-[280px] relative overflow-hidden"
+              <div
+                className="stagger-item col-span-4 md:col-span-2 card-glass rounded-3xl p-8 flex flex-col justify-center min-h-[280px] relative overflow-hidden"
                 onMouseEnter={() => setIsContactHovered(true)}
                 onMouseLeave={() => setIsContactHovered(false)}
               >
@@ -236,6 +186,7 @@ export const Home = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="--neutral-scale-8-light hover:text-[var(--accent-600)] transition-colors text-sm block"
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       INSTAGRAM
                     </a>
@@ -244,6 +195,7 @@ export const Home = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="--neutral-scale-8-light hover:text-[var(--accent-600)] transition-colors text-sm block"
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       TWITTER
                     </a>
@@ -252,18 +204,18 @@ export const Home = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="--neutral-scale-8-light hover:text-[var(--accent-600)] transition-colors text-sm block"
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       LINKEDIN
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Right Section - Featured Projects Card (1/3 width) */}
-            <motion.div
-              ref={projectCardRef}
-              className="col-span-1 card-glass rounded-3xl p-6 flex flex-col min-h-[580px] lg:min-h-0"
+            <div
+              className="stagger-item col-span-1 card-glass rounded-3xl p-6 flex flex-col min-h-[580px] lg:min-h-0"
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold" style={{ color: "var(--text)" }}>
@@ -397,10 +349,10 @@ export const Home = () => {
               >
                 View All Projects →
               </button>
-            </motion.div>
+            </div>
 
           </div>
-        </RevealOnScroll>
+        </StaggerReveal>
       </div>
 
       {/* Projects Section */}
@@ -436,7 +388,7 @@ export const Home = () => {
                           : "text-[#201f26] opacity-60 hover:opacity-100"
                       }`}
                     >
-                      <span className="text-sm tracking-[1.8px]">{category.title.toUpperCase()}</span>
+                      <span className="text-sm tracking-[1.8px]" style={{ fontFamily: "'Montserrat', sans-serif" }}>{category.title.toUpperCase()}</span>
                     </button>
                   ))}
                 </div>

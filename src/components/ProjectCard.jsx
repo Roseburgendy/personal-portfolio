@@ -30,16 +30,7 @@ export const ProjectCard = ({ project, categoryPrefix = "" }) => {
                   color: "var(--brand-scale-12-light)"
                 }}
               >
-                {project.tech}
-              </span>
-              <span
-                className="px-4 py-2 text-xs font-semibold rounded-full uppercase tracking-wider"
-                style={{
-                  backgroundColor: "var(--brand-scale-4-light)",
-                  color: "var(--brand-scale-12-light)"
-                }}
-              >
-                {project.role.split(',')[0].trim()}
+                {project.type}
               </span>
             </div>
 

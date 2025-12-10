@@ -11,7 +11,7 @@ export const GamesRotations = ({ games }) => {
     if (!scrollContainer) return;
 
     let scrollPos = 0;
-    const baseSpeed = 24; // px per second (NOT per frame)
+    const baseSpeed = 72; // px per second (NOT per frame)
 
     const animate = (time) => {
       if (!lastTimeRef.current) lastTimeRef.current = time;

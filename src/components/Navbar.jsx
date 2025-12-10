@@ -78,10 +78,10 @@ export const Navbar = ({ currentPage }) => {
                 onClick={scrollToProjectsSection}
                 className={navItemClass(currentPage === "portfolio")}
               >
-                <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">PORTFOLIO</p>
+                <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]" style={{ fontFamily: "'Montserrat', sans-serif" }}>PORTFOLIO</p>
               </button>
               <a href="#about" className={navItemClass(currentPage === "about")}>
-                <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]">ABOUT</p>
+                <p className="tracking-[1.8px] font-semibold text-[14px] text-[#201f26]" style={{ fontFamily: "'Montserrat', sans-serif" }}>ABOUT</p>
               </a>
             </div>
           </div>
@@ -138,14 +138,14 @@ export const Navbar = ({ currentPage }) => {
                     onClick={scrollToProjectsSection}
                     className={`py-3 w-full text-left ${currentPage === "portfolio" ? "opacity-100" : "opacity-70"} hover:opacity-100`}
                   >
-                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]">PORTFOLIO</p>
+                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]" style={{ fontFamily: "'Montserrat', sans-serif" }}>PORTFOLIO</p>
                   </button>
                   <a
                     href="#about"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`py-3 ${currentPage === "about" ? "opacity-100" : "opacity-70"} hover:opacity-100`}
                   >
-                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]">ABOUT</p>
+                    <p className="text-[12px] tracking-[1.56px] font-semibold text-[#201f26]" style={{ fontFamily: "'Montserrat', sans-serif" }}>ABOUT</p>
                   </a>
                 </div>
               </motion.div>
