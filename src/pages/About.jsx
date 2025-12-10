@@ -13,7 +13,20 @@ import { schoolHighlights } from '../data/schoolHighlights'
 import { hobbiesImages } from '../data/hobbies'
 import { movies } from '../data/movies'
 import { games } from '../data/games'
+import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+
 export const About = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
   const skills = [
     { name: 'React', category: 'Frontend' },
     { name: 'Unity', category: 'Game Dev' },
@@ -54,6 +67,24 @@ export const About = () => {
       <div className='absolute top-40 right-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
       <div className='absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>
 
+      {/* Interactive Background Ball */}
+      <motion.div
+        className="pointer-events-none fixed w-96 h-96 rounded-full blur-3xl opacity-30 z-0"
+        style={{
+          background: "radial-gradient(circle, var(--accent) 0%, transparent 100%)",
+        }}
+        animate={{
+          x: mousePosition.x - 192,
+          y: mousePosition.y - 192,
+        }}
+        transition={{
+          type: "spring",
+          damping: 30,
+          stiffness: 200,
+          mass: 0.5,
+        }}
+      />
+
       <section className='pt-32 pb-12 px-4 md:px-8'>
         <div className='max-w-[1000px] mx-auto'>
           {/* Bento Box Layout */}
@@ -87,11 +118,6 @@ export const About = () => {
                     >
                       Wang Ye
                     </h1>
-
-                    {/* Subtitle */}
-                    <p className='text-sm' style={{ color: 'var(--muted)' }}>
-                      Game Designer & Developer
-                    </p>
                   </div>
                 </div>
 
@@ -115,10 +141,13 @@ export const About = () => {
                       className='text-sm leading-relaxed'
                       style={{ color: 'var(--muted)' }}
                     >
-                      a fourth-year Digital Media Technology student at Xiamen University Malaysia. 
-                      I believe meaningful interactive experiences require both art and technology. 
-                      I'm passionate about how immersive experiences can create genuine connections between people and applications and contribute to social good, 
-                      and I seek to continue building meaningful experiences that actually matter to society.
+                      a fourth-year Digital Media Technology student at Xiamen
+                      University Malaysia. I believe meaningful interactive
+                      experiences require both art and technology. I'm
+                      passionate about how immersive experiences can create
+                      genuine connections between people and applications and
+                      contribute to social good, and I seek to continue building
+                      meaningful experiences that actually matter to society.
                     </p>
                   </div>
 
@@ -126,7 +155,7 @@ export const About = () => {
                   <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     {/* View CV Card */}
                     <a
-                      href='#'
+                      href='https://drive.google.com/file/d/1N0HLWbojgZKkyNWon8fZw7-94CVVKubp/view?usp=sharing'
                       className='group relative rounded-3xl p-7 transition-all duration-300 overflow-hidden flex flex-col justify-between min-h-[260px]'
                       style={{ backgroundColor: 'var(--brand-scale-3-light)' }}
                       onMouseEnter={e =>
@@ -164,7 +193,7 @@ export const About = () => {
                     </a>
                     {/* Instagram Card */}
                     <a
-                      href='https://instagram.com'
+                      href='https://www.instagram.com/rose_burgendy/'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='group relative rounded-3xl p-7 transition-all duration-300 overflow-hidden flex flex-col justify-between min-h-[260px]'
@@ -206,7 +235,7 @@ export const About = () => {
 
                     {/* LinkedIn Card */}
                     <a
-                      href='https://linkedin.com'
+                      href='https://www.linkedin.com/in/ye-wang-b385aa314/'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='group relative rounded-3xl p-7 transition-all duration-300 overflow-hidden flex flex-col justify-between min-h-[260px]'
@@ -262,7 +291,8 @@ export const About = () => {
                       Education
                     </h3>
                   </div>
-                  <div className='space-y-4'>
+                  <div className='space-y-2'>
+                    {/* Text on TOP */}
                     <div>
                       <h4
                         className='font-bold text-lg'
@@ -270,24 +300,32 @@ export const About = () => {
                       >
                         Bachelor of Engineering in Digital Media Technology
                       </h4>
+
                       <p style={{ color: 'var(--muted)' }}>
                         Xiamen University Malaysia
                       </p>
+
                       <p
                         className='text-sm mt-1'
                         style={{ color: 'var(--accent-600)' }}
                       >
-                       Expected 2026.7
+                        Expected 2026.7
                       </p>
+
                       <p
                         className='text-sm mt-1'
                         style={{ color: 'var(--accent-600)' }}
                       >
                         CGPA: 3.88/4.0
                       </p>
-
-
                     </div>
+
+                    {/* Logo DOWN below */}
+                    <img
+                      src='public/media/xmumlogo.png'
+                      alt='XMUM'
+                      className='w-100 h-30 object-contain opacity-90'
+                    />
                   </div>
                 </div>
 
@@ -300,7 +338,10 @@ export const About = () => {
 
             {/* Row 3: Movie & Game Rotations */}
             <RevealOnScroll>
-              <h2 className="text-2xl font-bold text-center mb-6" style={{ color: 'var(--text)' }}>
+              <h2
+                className='text-2xl font-bold text-center mb-6'
+                style={{ color: 'var(--text)' }}
+              >
                 Outside work.. I am a Big Game & Movie lover
               </h2>
 
@@ -316,18 +357,18 @@ export const About = () => {
               </div>
             </RevealOnScroll>
 
-
             {/* Row 4: Hobbies Section - Full Width */}
             <RevealOnScroll>
-              <h2 className="text-2xl font-bold text-center mb-6" style={{ color: 'var(--text)' }}>
+              <h2
+                className='text-2xl font-bold text-center mb-6'
+                style={{ color: 'var(--text)' }}
+              >
                 And other side quests...
               </h2>
               <div className='card-glass rounded-3xl overflow-hidden'>
                 <HobbiesCarousel images={hobbiesImages} />
               </div>
             </RevealOnScroll>
-
-
           </div>
         </div>
       </section>

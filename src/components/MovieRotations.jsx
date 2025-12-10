@@ -35,14 +35,14 @@ export const MovieRotations = ({ movies = [] }) => {
     <div className="relative w-full h-full">
       {/* Title */}
       <div className="absolute top-4 left-1/2 -translate-x-1/2">
-        <h3 className="text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-gray-500">
+        <h3 className="text-[18px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-gray-500 text-center">
           My movie rotations
         </h3>
       </div>
 
       {/* Poster area */}
       <div
-        className="absolute inset-x-0 top-8 bottom-2 flex items-center justify-center"
+        className="absolute inset-x-0 top-10 bottom-2 flex items-center justify-center"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -60,7 +60,8 @@ export const MovieRotations = ({ movies = [] }) => {
                 key={movie.title + index}
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[32px] overflow-hidden shadow-2xl bg-black/5 aspect-[3/4] cursor-pointer"
                 style={{
-                  height: isCenter ? "88%" : "70%", // center fits fully in the square
+                   zIndex: isCenter ? 30 : 10,
+                  height: isCenter ? "80%" : "70%", // center fits fully in the square
                 }}
                 initial={false}
                 animate={{
