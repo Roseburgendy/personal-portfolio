@@ -1,13 +1,18 @@
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
 import { RevealOnScroll } from '../components/RevealOnScroll'
+import { StaggerReveal } from '../components/StaggerReveal'
 import { SchoolHighlightsCarousel } from '../components/SchoolHighlightsCarousel'
 import { HobbiesCarousel } from '../components/HobbiesCarousel'
+import { MovieRotations } from '../components/MovieRotations'
+import { GamesRotations } from '../components/GamesRotations'
 import profile from '../assets/profile.webp'
 import { ArrowUpRight, FileText } from 'lucide-react'
 import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { schoolHighlights } from '../data/schoolHighlights'
-import { hobbies } from '../data/hobbies'
+import { hobbiesImages } from '../data/hobbies'
+import { movies } from '../data/movies'
+import { games } from '../data/games'
 export const About = () => {
   const skills = [
     { name: 'React', category: 'Frontend' },
@@ -54,10 +59,10 @@ export const About = () => {
           {/* Bento Box Layout */}
           <div className='space-y-4'>
             {/* Row 1: Profile Card (2/5) + Introduction & Get In Touch Column (3/5) */}
-            <RevealOnScroll>
+            <StaggerReveal staggerDelay={150}>
               <div className='grid grid-cols-1 lg:grid-cols-5 gap-6'>
                 {/* Profile Card - 2/5 width */}
-                <div className='lg:col-span-2 rounded-3xl overflow-hidden relative h-[500px] lg:h-auto'>
+                <div className='stagger-item lg:col-span-2 rounded-3xl overflow-hidden relative h-[500px] lg:h-auto'>
                   {/* Profile Image - fills entire container */}
                   <img
                     src={profile}
@@ -91,29 +96,29 @@ export const About = () => {
                 </div>
 
                 {/* Right Column - Introduction & Get In Touch - 3/5 width */}
-                <div className='lg:col-span-3 flex flex-col gap-4'>
+                <div className='stagger-item lg:col-span-3 flex flex-col gap-4'>
                   {/* Introduction Card */}
                   <div className='card-glass rounded-3xl p-6 md:p-8'>
                     <h2
                       className='text-2xl md:text-3xl font-bold mb-4'
                       style={{ color: 'var(--text)' }}
                     >
-                      Introduction
+                      Hey again!
                     </h2>
                     <h3
                       className='text-xl font-semibold mb-4'
                       style={{ color: 'var(--accent-600)' }}
                     >
-                      Services for all design and IT needs
+                      I am Rose Wang,
                     </h3>
                     <p
                       className='text-sm leading-relaxed'
                       style={{ color: 'var(--muted)' }}
                     >
-                      I prepare various kinds of design and IT needs such as
-                      UI/UX design, web design, creating a website according to
-                      your needs, hosting and cloud, custom domain, company
-                      profile in PDF format or website and also copywriting.
+                      a fourth-year Digital Media Technology student at Xiamen University Malaysia. 
+                      I believe meaningful interactive experiences require both art and technology. 
+                      I'm passionate about how immersive experiences can create genuine connections between people and applications and contribute to social good, 
+                      and I seek to continue building meaningful experiences that actually matter to society.
                     </p>
                   </div>
 
@@ -242,13 +247,13 @@ export const About = () => {
                   </div>
                 </div>
               </div>
-            </RevealOnScroll>
+            </StaggerReveal>
 
             {/* Row 2: Education & Experience */}
-            <RevealOnScroll>
+            <StaggerReveal staggerDelay={150}>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 {/* Education Card */}
-                <div className='card-glass rounded-3xl p-8'>
+                <div className='stagger-item card-glass rounded-3xl p-8'>
                   <div className='flex items-center gap-3 mb-6'>
                     <h3
                       className='text-2xl font-bold'
@@ -287,28 +292,42 @@ export const About = () => {
                 </div>
 
                 {/* School Highlights Carousel */}
-                <SchoolHighlightsCarousel highlights={schoolHighlights} />
+                <div className='stagger-item'>
+                  <SchoolHighlightsCarousel highlights={schoolHighlights} />
+                </div>
+              </div>
+            </StaggerReveal>
+
+            {/* Row 3: Movie & Game Rotations */}
+            <RevealOnScroll>
+              <h2 className="text-2xl font-bold text-center mb-6" style={{ color: 'var(--text)' }}>
+                Outside work.. I am a Big Game & Movie lover
+              </h2>
+
+              <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
+                {/* Game Rotations - 1 column (3:4 ratio) */}
+                <div className='card-glass rounded-3xl overflow-hidden aspect-[3/5]'>
+                  <GamesRotations games={games} />
+                </div>
+                {/* Movie Rotations - 3 columns (9:4 ratio to match height) */}
+                <div className='card-glass rounded-3xl overflow-hidden aspect-[3/4] md:aspect-[9/5] md:col-span-3'>
+                  <MovieRotations movies={movies} />
+                </div>
               </div>
             </RevealOnScroll>
 
-            {/* Row 3: Hobbies Section - Full Width */}
+
+            {/* Row 4: Hobbies Section - Full Width */}
             <RevealOnScroll>
-              <div className='card-glass rounded-3xl p-8 overflow-hidden'>
-                <h3
-                  className='text-2xl font-bold mb-2'
-                  style={{ color: 'var(--text)' }}
-                >
-                  My Hobbies
-                </h3>
-                <p
-                  className='text-sm mb-4'
-                  style={{ color: 'var(--muted)' }}
-                >
-                  Things I love to do in my free time
-                </p>
-                <HobbiesCarousel hobbies={hobbies} />
+              <h2 className="text-2xl font-bold text-center mb-6" style={{ color: 'var(--text)' }}>
+                And other side quests...
+              </h2>
+              <div className='card-glass rounded-3xl overflow-hidden'>
+                <HobbiesCarousel images={hobbiesImages} />
               </div>
             </RevealOnScroll>
+
+
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export const HobbiesCarousel = ({ hobbies }) => {
+export const HobbiesCarousel = ({ images }) => {
   const scrollRef = useRef(null);
   const animationRef = useRef(null);
 
@@ -49,10 +49,10 @@ export const HobbiesCarousel = ({ hobbies }) => {
       scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
       scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [hobbies]);
+  }, [images]);
 
-  // Duplicate hobbies array for seamless loop
-  const duplicatedHobbies = [...hobbies, ...hobbies];
+  // Duplicate images array for seamless loop
+  const duplicatedImages = [...images, ...images];
 
   return (
     <div className="w-full overflow-hidden py-8">
@@ -67,31 +67,18 @@ export const HobbiesCarousel = ({ hobbies }) => {
       `}</style>
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-scroll scroll-smooth hide-scrollbar"
+        className="flex gap-3 overflow-x-scroll hide-scrollbar pl-8"
       >
-        {duplicatedHobbies.map((hobby, index) => (
+        {duplicatedImages.map((image, index) => (
           <div
-            key={`${hobby.id}-${index}`}
-            className="flex-shrink-0 group relative"
+            key={`image-${index}`}
+            className="flex-shrink-0"
           >
-            <div className="relative w-[300px] h-[200px] rounded-2xl overflow-hidden">
-              {/* Image */}
-              <img
-                src={hobby.image}
-                alt={hobby.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-              {/* Title */}
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <h4 className="text-xl font-bold text-white">
-                  {hobby.title}
-                </h4>
-              </div>
-            </div>
+            <img
+              src={image}
+              alt={`Hobby ${index + 1}`}
+              className="h-[400px] w-auto object-cover rounded-xl"
+            />
           </div>
         ))}
       </div>
