@@ -17,16 +17,16 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 export const About = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+    const handleMouseMove = e => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
   const skills = [
     { name: 'React', category: 'Frontend' },
     { name: 'Unity', category: 'Game Dev' },
@@ -69,19 +69,20 @@ export const About = () => {
 
       {/* Interactive Background Ball */}
       <motion.div
-        className="pointer-events-none fixed w-96 h-96 rounded-full blur-3xl opacity-30 z-0"
+        className='pointer-events-none fixed w-96 h-96 rounded-full blur-3xl opacity-30 z-0'
         style={{
-          background: "radial-gradient(circle, var(--accent) 0%, transparent 100%)",
+          background:
+            'radial-gradient(circle, var(--accent) 0%, transparent 100%)'
         }}
         animate={{
           x: mousePosition.x - 192,
-          y: mousePosition.y - 192,
+          y: mousePosition.y - 192
         }}
         transition={{
-          type: "spring",
+          type: 'spring',
           damping: 30,
           stiffness: 200,
-          mass: 0.5,
+          mass: 0.5
         }}
       />
 
@@ -321,11 +322,13 @@ export const About = () => {
                     </div>
 
                     {/* Logo DOWN below */}
-                    <img
-                      src='public/media/xmumlogo.png'
-                      alt='XMUM'
-                      className='w-100 h-30 object-contain opacity-90'
-                    />
+                    <a href='https://www.xmu.edu.my/'>
+                      <img
+                        src='/personal-portfolio/media/xmumlogo.png'
+                        alt='XMUM'
+                        className='w-100 h-30 object-contain opacity-90'
+                      />
+                    </a>
                   </div>
                 </div>
 
