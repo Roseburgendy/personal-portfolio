@@ -314,29 +314,17 @@ export const featuredProjects = [
     id: 1,
     slug: 'hexagonal-war', // Unique slug for routing
     title: 'Hexagonal War: Chemical Crisis',
+    type: 'Board Game Design',
     role: 'Game Designer, Project Manager',
     description:
-      'This project is a Bomberman clone made in Lua using the Löve2D framework, that my classmate David Bång and I worked on while studying at FutureGames.',
-    fullDescription:
-      'Hexagonal War: Chemical Crisis is a strategic multiplayer game that reimagines the classic Bomberman formula with hexagonal tiles and chemical-themed power-ups. Players compete to be the last one standing by strategically placing bombs and utilizing environmental hazards.',
+      'A Board Game to transform chemistry learning into an immersive experience',
     teamSize: '6',
-    duration: '4 Months',
-    tech: 'Löve2D (Lua)',
+    year: '2024',
+    duration: '8 Weeks',
+    tech: 'Paper Prototyping, Adobe Illustrator, Canva',
     image: '/personal-portfolio/media/thumbnails/hex_war.webp',
-    features: [
-      'Hexagonal grid-based gameplay mechanics',
-      'Multiplayer support for up to 4 players',
-      'Chemical-themed power-ups and abilities',
-      'Dynamic destructible environments',
-      'Custom level editor'
-    ],
-    responsibilities: [
-      'Led the design and development of core gameplay mechanics',
-      'Managed project timeline and team coordination',
-      'Implemented player movement and bomb placement systems',
-      'Designed and balanced power-up system',
-      'Created level layouts and tested game balance'
-    ],
+    features: [],
+    responsibilities: [],
     gallery: [],
     links: []
   },

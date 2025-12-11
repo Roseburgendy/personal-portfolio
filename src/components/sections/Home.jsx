@@ -261,7 +261,7 @@ export const Home = () => {
                 >
                   {/* Project Thumbnail Card */}
                   <a
-                    href={`#project/${currentProject.id}`}
+                    href={`#project/${currentProject.slug}`}
                     className="relative w-full h-56 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group mb-4"
                   >
                     <div className="relative w-full h-full bg-gradient-to-br from-orange-100 to-pink-100">
