@@ -1166,14 +1166,15 @@ export const HexagonalWarDetail = () => {
             className={styles.sectionSubtitle.className}
             style={styles.sectionSubtitle.style}
           >
-            I was involved in the product strategy and co-led the end-to-end
-            design ownership of the product.
+            Over an eight-week period, we iterated from initial concept to a playable prototype.
+            The following stages outline the structured process we followed to ensure clarity in design decisions, 
+            efficient iteration, and a smooth transition from ideation to playtesting.
           </p>
 
           {/* Process Cards */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-              {/* Card 1 */}
-              <div className='card-glass rounded-3xl overflow-hidden flex flex-col'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {/* Card 1 */}
+            <div className='card-glass rounded-3xl overflow-hidden flex flex-col'>
               {/* Number Badge */}
               <div className='p-6 pb-0'>
                 <div
@@ -1362,77 +1363,125 @@ export const HexagonalWarDetail = () => {
               </div>
             </div>
           </div>
+
+          <div className='card-glass mt-10 rounded-3xl max-w-2xl overflow-hidden flex flex-col mx-auto '>
+            {/* Image */}
+            <div className='relative bg-[#f2d7d7]/30 p-6 rounded-2xl'>
+              <img
+                src='/personal-portfolio/media/projects/hex/project-timeline.webp'
+                alt='Gameplay brainstorming'
+                className='w-full h-full object-cover'
+              />
+            </div>
+          </div>
         </div>
       </RevealOnScroll>
 
-      {/* My Contributions */}
-      {project?.responsibilities && project.responsibilities.length > 0 && (
+      {/* Player Testing Section */}
+      <div className='mt-20'>
         <RevealOnScroll>
-          <div className='card-glass rounded-3xl p-6 md:p-8'>
-            <h2
-              className='text-xl md:text-2xl font-bold mb-4'
-              style={{ color: 'var(--text)' }}
+          <h3
+            className={styles.sectionTitle.className}
+            style={styles.sectionTitle.style}
+          >
+            What our player says..
+          </h3>
+          <p
+            className={styles.bodyText.className}
+            style={styles.bodyText.style}
+          >
+            We conducted 4 rounds of game testing in the session, after the
+            session, players are welcomed to share any feedback on our game.
+            Here is what our players highlighted:
+          </p>
+        </RevealOnScroll>
+
+        {/* Middle Content - Single Optimized Image */}
+        <div className='mt-0 md:mt-10'>
+          <RevealOnScroll>
+            <div className='relative w-full max-w-4xl mx-auto md:px-0'>
+              <img
+                src='/personal-portfolio/media/projects/hex/player-feedback.webp'
+                alt='Player feedback and game testing session'
+                className='w-full h-auto object-contain'
+              />
+            </div>
+          </RevealOnScroll>
+        </div>
+
+        {/* Final Words - Reveals Last */}
+        <RevealOnScroll>
+          <div className='mt-16 text-center max-w-3xl mx-auto'>
+            <p
+              className='text-lg md:text-xl leading-relaxed'
+              style={{ color: 'var(--brand-scale-12-light)' }}
             >
-              My Contributions
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2'>
-              {project.responsibilities.map((responsibility, index) => (
-                <div key={index} className='flex items-start text-sm'>
-                  <span className='mr-2' style={{ color: 'var(--accent-600)' }}>
-                    •
-                  </span>
-                  <span style={{ color: 'var(--muted)' }}>
-                    {responsibility}
-                  </span>
-                </div>
-              ))}
+              Based on the valuable feedback, we further refine our board game
+              to the best.
+            </p>
+          </div>
+        </RevealOnScroll>
+      </div>
+
+      {/* Final Display Gallery Section */}
+      <RevealOnScroll>
+        <div className='mt-20'>
+          <h3
+            className={styles.sectionTitle.className}
+            style={styles.sectionTitle.style}
+          >
+            Gallery
+          </h3>
+          {/* Gallery Grid - 2 rows x 3 columns */}
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8'>
+            {/* Row 1 */}
+            <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
+              <img
+                src='/personal-portfolio/media/projects/hex/gallery/top-left.webp'
+                alt='Item cards display'
+                className='w-full h-full object-cover'
+              />
+            </div>
+            <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
+              <img
+                src='/personal-portfolio/media/projects/hex/gallery/top-center.webp'
+                alt='Team photo'
+                className='w-full h-full object-cover'
+              />
+            </div>
+            <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
+              <img
+                src='/personal-portfolio/media/projects/hex/gallery/top-right.webp'
+                alt='Game components'
+                className='w-full h-full object-cover'
+              />
+            </div>
+
+            {/* Row 2 */}
+            <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
+              <img
+                src='/personal-portfolio/media/projects/hex/gallery/bottom-left.webp'
+                alt='Card collection'
+                className='w-full h-full object-cover'
+              />
+            </div>
+            <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
+              <img
+                src='/personal-portfolio/media/projects/hex/gallery/bottom-center.webp'
+                alt='Game board setup'
+                className='w-full h-full object-cover'
+              />
+            </div>
+            <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
+              <img
+                src='/personal-portfolio/media/projects/hex/gallery/bottom-right.webp'
+                alt='Hexagonal tiles'
+                className='w-full h-full object-cover'
+              />
             </div>
           </div>
-        </RevealOnScroll>
-      )}
-
-      {/* Gallery */}
-      {project?.gallery && project.gallery.length > 0 && (
-        <RevealOnScroll>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {project.gallery.map((image, index) => (
-              <div
-                key={index}
-                className='card-glass rounded-3xl overflow-hidden aspect-video'
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} screenshot ${index + 1}`}
-                  className='w-full h-full object-cover'
-                />
-              </div>
-            ))}
-          </div>
-        </RevealOnScroll>
-      )}
-
-      {/* Links */}
-      {project?.links && project.links.length > 0 && (
-        <RevealOnScroll>
-          <div className='flex flex-wrap gap-3'>
-            {project.links.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='px-6 py-3 rounded-xl font-semibold transition-all text-sm'
-                style={{
-                  background: 'var(--accent)',
-                  color: 'white'
-                }}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </RevealOnScroll>
-      )}
+        </div>
+      </RevealOnScroll>
     </>
   )
 
