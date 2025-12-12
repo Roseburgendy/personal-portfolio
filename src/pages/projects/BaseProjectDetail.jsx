@@ -2,7 +2,9 @@ import { Navbar } from '../../components/Navbar'
 import { Footer } from '../../components/Footer'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
 import { StaggerReveal } from '../../components/StaggerReveal'
+import { ProjectCard } from '../../components/ProjectCard'
 import { FiUser, FiClock, FiCode, FiUsers, FiLayers } from 'react-icons/fi'
+import { gameProjects, artProjects, otherProjects } from '../../data/projects'
 
 /**
  * Base Project Detail Component
@@ -49,6 +51,18 @@ export const BaseProjectDetail = ({
         ?.split(',')
         .map(item => item.trim())
         .filter(Boolean)
+
+  // Get all projects and find the next 3 projects
+  const allProjects = [...gameProjects, ...artProjects, ...otherProjects]
+  const currentIndex = allProjects.findIndex(p => p.slug === project.slug)
+
+  // Get next 3 projects (excluding current project)
+  const nextProjects = []
+  for (let i = 1; i <= 3; i++) {
+    const nextIndex = (currentIndex + i) % allProjects.length
+    nextProjects.push(allProjects[nextIndex])
+  }
+
   return (
     <div className='min-h-screen' style={{ background: 'var(--bg)' }}>
       <Navbar currentPage='portfolio' />
@@ -91,7 +105,7 @@ export const BaseProjectDetail = ({
                     <img
                       src={project.image}
                       alt={project.title}
-                      className='w-full h-full object-cover'
+                      className='w-full h-full object-cover object-left'
                     />
 
                     <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent' />
@@ -321,9 +335,9 @@ export const BaseProjectDetail = ({
                   {/* Hero Image */}
                   <div className='card-glass rounded-3xl p-4 bg-[#f2d7d7]/60 '>
                     <img
-                      src={project.image}
+                      src={project.image2}
                       alt={project.title}
-                      className='w-full h-full object-cover'
+                      className='w-full h-full object-cover rounded-2xl'
                     />
                   </div>
                 </div>
@@ -468,6 +482,68 @@ export const BaseProjectDetail = ({
           </div>
         </div>
       </section>
+
+      {/* Next Projects Section */}
+      {nextProjects && nextProjects.length > 0 && (
+        <section className='py-16 px-4 md:px-8' style={{ background: 'var(--bg)' }}>
+          <div className='max-w-[1200px] mx-auto'>
+            <RevealOnScroll>
+              <div className='text-center mb-12'>
+                <h2
+                  className='text-3xl md:text-4xl font-bold mb-4'
+                  style={{ color: 'var(--text)' }}
+                >
+                  More Projects
+                </h2>
+                <p
+                  className='text-base md:text-lg'
+                  style={{ color: 'var(--muted)' }}
+                >
+                  Continue exploring my work
+                </p>
+              </div>
+            </RevealOnScroll>
+
+            <StaggerReveal staggerDelay={150}>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
+                {nextProjects.map(proj => (
+                  <div key={proj.slug} className='stagger-item'>
+                    <ProjectCard project={proj} />
+                  </div>
+                ))}
+              </div>
+            </StaggerReveal>
+
+            <RevealOnScroll>
+              <div className='text-center mt-12'>
+                <a
+                  href='#home'
+                  className='inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base transition-all hover:scale-105'
+                  style={{
+                    background: 'var(--accent-600)',
+                    color: 'white'
+                  }}
+                >
+                  <svg
+                    className='w-5 h-5'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M10 19l-7-7m0 0l7-7m-7 7h18'
+                    />
+                  </svg>
+                  Back to Home
+                </a>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </div>

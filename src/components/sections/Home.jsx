@@ -293,7 +293,7 @@ export const Home = () => {
                         background: "var(--accent-50)",
                         color: "var(--accent-600)"
                       }}>
-                        {currentProject.tech}
+                        {currentProject.type}
                       </span>
                     </div>
 
@@ -304,18 +304,6 @@ export const Home = () => {
                     <p className="text-sm muted leading-relaxed flex-1">
                       {currentProject.description}
                     </p>
-
-                    {/* Meta Info */}
-                    <div className="flex items-center gap-4 mt-4">
-                      <div className="flex items-center gap-1 text-sm muted">
-                        <span>👥</span>
-                        <span>{currentProject.teamSize}</span>
-                      </div>
-                      <div className="flex items-center gap-1 text-sm muted">
-                        <span>⏱️</span>
-                        <span>{currentProject.duration}</span>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </div>

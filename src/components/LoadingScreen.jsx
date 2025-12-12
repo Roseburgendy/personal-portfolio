@@ -31,12 +31,12 @@ export const LoadingScreen = ({ onComplete }) => {
       }}
     >
       {/* Typing animation */}
-      <div
+      <h3
         className="mb-4 text-4xl font-bold"
         style={{ color: "var(--accent)" }}
       >
         {text} <span className="animate-blink ml-1">|</span>
-      </div>
+      </h3>
 
       <FlowerLoader spin petals={12} />
     </div>

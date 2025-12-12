@@ -7,12 +7,13 @@ export const gameProjects = [
     type: 'Board Game Design',
     role: 'Game Designer, Project Manager',
     description:
-      'A Board Game to transform chemistry learning into an immersive experience',
+      'An educational board game designed to transform chemistry learning into an engaging and strategic experience. Players compete on a hexagonal map while managing resources and responding to chemical challenges. The game aims to make abstract chemistry concepts more interactive and approachable through play.',
     teamSize: '6',
     year: '2024',
     duration: '8 Weeks',
     tech: 'Paper Prototyping, Adobe Illustrator, Canva',
     image: '/personal-portfolio/media/thumbnails/hex_war.webp',
+    image2: '/personal-portfolio/media/projects/hex/gallery/bottom-center.webp',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -214,13 +215,14 @@ export const artProjects = [
     type: '3D Art',
     role: 'Digital Artist',
     description:
-      'A strategy simulation game where players build and manage colonies on distant planets, balancing resources and survival.',
+      '3D modeling project that explores an autumn-inspired fantasy environment and character.',
     fullDescription:
-      'Space Colony Simulator challenges players to establish thriving settlements across the galaxy. Manage resources, research technologies, and ensure colonist happiness while dealing with environmental hazards and alien encounters.',
+      'Autumn Theme Modeling is part of Harmony of Seasons, a 3D modeling course project set in a medieval-inspired fantasy world. My contribution focuses on the Autumn Castle and the Autumn Witch, designed to represent autumn as a season of transition and fading vitality. The castle features Gothic architectural elements and weathered materials to create a warm yet solemn atmosphere. The Autumn Witch complements the environment through organic forms, flowing silhouettes, and a cohesive autumnal color palette.',
     teamSize: '5',
     duration: '4 Weeks',
-    tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    tech: 'Autodesk Maya, Substance Painter, Adobe Illustrator',
+    image: '/personal-portfolio/media/thumbnails/model_cover.webp',
+    image2: '/personal-portfolio/media/thumbnails/model_2.webp',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -249,7 +251,7 @@ export const artProjects = [
 
 // Other Projects
 export const otherProjects = [
-    {
+  {
     id: 1,
     slug: 'flutter-dev', // Unique slug for routing
     title: 'Flutter App',
@@ -268,7 +270,7 @@ export const otherProjects = [
     gallery: [],
     links: []
   },
-   {
+  {
     id: 2,
     slug: 'web-dev', // Unique slug for routing
     title: 'Digital Marketing Website',
@@ -305,7 +307,7 @@ export const otherProjects = [
     responsibilities: [],
     gallery: [],
     links: []
-  },
+  }
 ]
 
 // Featured Projects (shown on homepage)
@@ -317,12 +319,13 @@ export const featuredProjects = [
     type: 'Board Game Design',
     role: 'Game Designer, Project Manager',
     description:
-      'A Board Game to transform chemistry learning into an immersive experience',
+      'Traditional learning often isolates formulas and theory from real-life application, making it hard for learners to connect with the subject. We wanted to design a board game that transforms chemistry learning into an immersive experience.',
     teamSize: '6',
     year: '2024',
     duration: '8 Weeks',
     tech: 'Paper Prototyping, Adobe Illustrator, Canva',
     image: '/personal-portfolio/media/thumbnails/hex_war.webp',
+    image2: '/personal-portfolio/media/projects/hex/gallery/bottom-center.webp',
     features: [],
     responsibilities: [],
     gallery: [],

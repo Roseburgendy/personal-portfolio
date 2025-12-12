@@ -5,12 +5,14 @@
  */
 
 import { HexagonalWarDetail } from "./HexagonalWarDetail";
+import { ThreeDModelDetail } from "./ThreeDModelDetail";
 // Import other custom project detail pages here as you create them
 // import { MysticForestDetail } from "./MysticForestDetail";
 // import { SpaceColonyDetail } from "./SpaceColonyDetail";
 
 export const projectRegistry = {
   "hexagonal-war": HexagonalWarDetail,
+  "3d-model": ThreeDModelDetail,
   // Add more custom project pages here:
   // "mystic-forest": MysticForestDetail,
   // "space-colony": SpaceColonyDetail,

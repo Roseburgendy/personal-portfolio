@@ -278,7 +278,7 @@ export const HexagonalWarDetail = () => {
     <>
       {/* inspiration Section*/}
       <StaggerReveal>
-        <div className='grid md:grid-cols-2 gap-6 mt-20 items-center'>
+        <div className='grid md:grid-cols-2 gap-6 mt-50 items-center'>
           {/*Left Cover*/}
           <div
             className='relative rounded-3xl overflow-hidden p-6 flex items-end min-h-[400px]'
@@ -330,8 +330,14 @@ export const HexagonalWarDetail = () => {
             className={styles.sectionSubtitle.className}
             style={styles.sectionSubtitle.style}
           >
-            I was involved in the product strategy and co-led the end-to-end
-            design ownership of the product.
+            To inform the overall design approach, Our group studied a selection of
+            well-known board and card games that demonstrate strong systemic
+            balance, player interaction, and strategic tension. These games were
+            analyzed for how simple mechanics can create meaningful
+            decision-making, pacing, and replayability. The insights drawn from
+            these references helped shape my understanding of resource flow,
+            player engagement, and strategic depth, which influenced my design
+            thinking throughout the project.
           </p>
 
           {/* Process Blocks */}
@@ -1166,15 +1172,17 @@ export const HexagonalWarDetail = () => {
             className={styles.sectionSubtitle.className}
             style={styles.sectionSubtitle.style}
           >
-            Over an eight-week period, we iterated from initial concept to a playable prototype.
-            The following stages outline the structured process we followed to ensure clarity in design decisions, 
-            efficient iteration, and a smooth transition from ideation to playtesting.
+            Over an eight-week period, we iterated from initial concept to a
+            playable prototype. The following stages outline the structured
+            process we followed to ensure clarity in design decisions, efficient
+            iteration, and a smooth transition from ideation to playtesting.
           </p>
 
           {/* Process Cards */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            {/* Card 1 */}
-            <div className='card-glass rounded-3xl overflow-hidden flex flex-col'>
+          <StaggerReveal staggerDelay={150}>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+              {/* Card 1 */}
+              <div className='stagger-item card-glass rounded-3xl overflow-hidden flex flex-col'>
               {/* Number Badge */}
               <div className='p-6 pb-0'>
                 <div
@@ -1236,7 +1244,7 @@ export const HexagonalWarDetail = () => {
             </div>
 
             {/* Card 2 */}
-            <div className='card-glass rounded-3xl overflow-hidden flex flex-col'>
+            <div className='stagger-item card-glass rounded-3xl overflow-hidden flex flex-col'>
               {/* Number Badge */}
               <div className='p-6 pb-0'>
                 <div
@@ -1300,7 +1308,7 @@ export const HexagonalWarDetail = () => {
             </div>
 
             {/* Card 3 */}
-            <div className='card-glass rounded-3xl overflow-hidden flex flex-col'>
+            <div className='stagger-item card-glass rounded-3xl overflow-hidden flex flex-col'>
               {/* Number Badge */}
               <div className='p-6 pb-0'>
                 <div
@@ -1363,6 +1371,7 @@ export const HexagonalWarDetail = () => {
               </div>
             </div>
           </div>
+          </StaggerReveal>
 
           <div className='card-glass mt-10 rounded-3xl max-w-2xl overflow-hidden flex flex-col mx-auto '>
             {/* Image */}

@@ -29,6 +29,9 @@ function App() {
     const handleHashChange = () => {
       const newHash = window.location.hash.slice(1);
       setCurrentPage(newHash || "home");
+
+      // Scroll to top when navigating to any page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     window.addEventListener("hashchange", handleHashChange);
