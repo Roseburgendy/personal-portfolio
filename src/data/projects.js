@@ -19,7 +19,7 @@ export const gameProjects = [
     gallery: [],
     links: []
   },
-  {
+/*   {
     id: 2,
     slug: 'vr-farm', // Unique slug for routing
     title: 'Harvest & Feast',
@@ -203,7 +203,7 @@ export const gameProjects = [
     ],
     gallery: [],
     links: []
-  }
+  } */
 ]
 
 // Art Projects
@@ -228,7 +228,7 @@ export const artProjects = [
     gallery: [],
     links: []
   },
-  {
+/*   {
     id: 2,
     slug: 'ae-proj', // Unique slug for routing
     title: 'Short Sci-fi Production',
@@ -246,12 +246,12 @@ export const artProjects = [
     responsibilities: [],
     gallery: [],
     links: []
-  }
+  } */
 ]
 
 // Other Projects
 export const otherProjects = [
-  {
+/*   {
     id: 1,
     slug: 'flutter-dev', // Unique slug for routing
     title: 'Flutter App',
@@ -307,7 +307,7 @@ export const otherProjects = [
     responsibilities: [],
     gallery: [],
     links: []
-  }
+  } */
 ]
 
 // Featured Projects (shown on homepage)
@@ -331,36 +331,25 @@ export const featuredProjects = [
     gallery: [],
     links: []
   },
-
-  {
+    {
     id: 2,
-    slug: 'mystic-forest-featured', // Unique slug for routing (different from gameProjects to avoid conflicts)
-    title: 'Hexagonal War: Chemical Crisis',
-    role: 'Game Designer, Project Manager',
+    slug: '3d-model', // Unique slug for routing
+    title: 'Autumn Theme Modeling',
+    type: '3D Art',
+    role: 'Digital Artist',
     description:
-      'This project is a Bomberman clone made in Lua using the Löve2D framework, that my classmate David Bång and I worked on while studying at FutureGames.',
+      '3D modeling project that explores an autumn-inspired fantasy environment and character.',
     fullDescription:
-      'Hexagonal War: Chemical Crisis is a strategic multiplayer game that reimagines the classic Bomberman formula with hexagonal tiles and chemical-themed power-ups. Players compete to be the last one standing by strategically placing bombs and utilizing environmental hazards.',
-    teamSize: '6',
-    duration: '4 Months',
-    tech: 'Löve2D (Lua)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
-    features: [
-      'Hexagonal grid-based gameplay mechanics',
-      'Multiplayer support for up to 4 players',
-      'Chemical-themed power-ups and abilities',
-      'Dynamic destructible environments',
-      'Custom level editor'
-    ],
-    responsibilities: [
-      'Led the design and development of core gameplay mechanics',
-      'Managed project timeline and team coordination',
-      'Implemented player movement and bomb placement systems',
-      'Designed and balanced power-up system',
-      'Created level layouts and tested game balance'
-    ],
+      'Autumn Theme Modeling is part of Harmony of Seasons, a 3D modeling course project set in a medieval-inspired fantasy world. My contribution focuses on the Autumn Castle and the Autumn Witch, designed to represent autumn as a season of transition and fading vitality. The castle features Gothic architectural elements and weathered materials to create a warm yet solemn atmosphere. The Autumn Witch complements the environment through organic forms, flowing silhouettes, and a cohesive autumnal color palette.',
+    teamSize: '5',
+    duration: '4 Weeks',
+    tech: 'Autodesk Maya, Substance Painter, Adobe Illustrator',
+    image: '/personal-portfolio/media/thumbnails/model_cover.webp',
+    image2: '/personal-portfolio/media/thumbnails/model_2.webp',
+    features: [],
+    responsibilities: [],
     gallery: [],
     links: []
-  }
+  },
   // Add more featured projects here
 ]

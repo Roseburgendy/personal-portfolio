@@ -298,7 +298,7 @@ export const About = () => {
                     {/* Logo DOWN below */}
                     <a href='https://www.xmu.edu.my/'>
                       <img
-                        src='/personal-portfolio/media/xmumlogo.png'
+                        src="/personal-portfolio/media/xmumlogo.png"
                         alt='XMUM'
                         className='w-100 h-30 object-contain opacity-90'
                       />

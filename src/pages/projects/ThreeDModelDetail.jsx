@@ -611,7 +611,7 @@ export const ThreeDModelDetail = () => {
                         color: 'white'
                       }}
                     >
-                      1
+                      2
                     </div>
                     <h3
                       className='text-xl font-bold mb-3'
@@ -679,7 +679,7 @@ export const ThreeDModelDetail = () => {
                         color: 'white'
                       }}
                     >
-                      2
+                      3
                     </div>
                     <h3
                       className='text-xl font-bold mb-3'
@@ -747,7 +747,7 @@ export const ThreeDModelDetail = () => {
                         color: 'white'
                       }}
                     >
-                      3
+                      4
                     </div>
                     <h3
                       className='text-xl font-bold mb-3'
