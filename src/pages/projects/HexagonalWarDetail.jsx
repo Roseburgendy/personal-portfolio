@@ -1,10 +1,12 @@
 import { BaseProjectDetail } from './BaseProjectDetail'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
 import { ProjectSidebar } from '../../components/ProjectSidebar'
+import { LazyImage } from '../../components/LazyImage'
 import { gameProjects } from '../../data/projects'
 import { StaggerReveal } from '../../components/StaggerReveal'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
+import { preloadImages, getCriticalImages } from '../../utils/imagePreloader'
 
 /**
  * Customized Project Detail Page for Hexagonal War: Chemical Crisis
@@ -1461,21 +1463,21 @@ export const HexagonalWarDetail = () => {
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8'>
             {/* Row 1 */}
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
-              <img
+              <LazyImage
                 src='/personal-portfolio/media/projects/hex/gallery/top-left.webp'
                 alt='Item cards display'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
-              <img
+              <LazyImage
                 src='/personal-portfolio/media/projects/hex/gallery/top-center.webp'
                 alt='Team photo'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
-              <img
+              <LazyImage
                 src='/personal-portfolio/media/projects/hex/gallery/top-right.webp'
                 alt='Game components'
                 className='w-full h-full object-cover'
@@ -1484,21 +1486,21 @@ export const HexagonalWarDetail = () => {
 
             {/* Row 2 */}
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
-              <img
+              <LazyImage
                 src='/personal-portfolio/media/projects/hex/gallery/bottom-left.webp'
                 alt='Card collection'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
-              <img
+              <LazyImage
                 src='/personal-portfolio/media/projects/hex/gallery/bottom-center.webp'
                 alt='Game board setup'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
-              <img
+              <LazyImage
                 src='/personal-portfolio/media/projects/hex/gallery/bottom-right.webp'
                 alt='Hexagonal tiles'
                 className='w-full h-full object-cover'

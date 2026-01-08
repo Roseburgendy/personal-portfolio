@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Navbar } from '../../components/Navbar'
 import { Footer } from '../../components/Footer'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
@@ -5,6 +6,7 @@ import { StaggerReveal } from '../../components/StaggerReveal'
 import { ProjectCard } from '../../components/ProjectCard'
 import { FiUser, FiClock, FiCode, FiUsers, FiLayers } from 'react-icons/fi'
 import { gameProjects, artProjects, otherProjects } from '../../data/projects'
+import { preloadImage } from '../../utils/imagePreloader'
 
 /**
  * Base Project Detail Component
@@ -17,6 +19,15 @@ export const BaseProjectDetail = ({
   customSections = null,
   heroLayout = 'default'
 }) => {
+  // Preload hero image for faster initial render
+  useEffect(() => {
+    if (project?.image) {
+      preloadImage(project.image).catch(err =>
+        console.warn('Hero image preload failed:', err)
+      )
+    }
+  }, [project])
+
   if (!project) {
     return (
       <div className='min-h-screen' style={{ background: 'var(--bg)' }}>

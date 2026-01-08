@@ -1,16 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { BaseProjectDetail } from './BaseProjectDetail'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
 import { StaggerReveal } from '../../components/StaggerReveal'
 import { ProjectSidebar } from '../../components/ProjectSidebar'
+import { LazyImage } from '../../components/LazyImage'
 import { otherProjects } from '../../data/projects'
+import { preloadImages, getCriticalImages } from '../../utils/imagePreloader'
 
 export const ThesisProjectDetail = () => {
   const project = otherProjects.find(p => p.slug === 'thesis-project')
   const [expandedSection, setExpandedSection] = useState(null)
   const [activeFddPhase, setActiveFddPhase] = useState(1) // Default to "Build Feature List"
   const [activeExpCard, setActiveExpCard] = useState('design') // Default to "Study Design"
+
+  // Preload critical images on component mount
+  useEffect(() => {
+    const criticalImages = getCriticalImages('thesis-project')
+    preloadImages(criticalImages).catch(err =>
+      console.warn('Image preload failed:', err)
+    )
+  }, [])
 
   const toggleSection = sectionId => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId)
@@ -793,17 +803,19 @@ export const ThesisProjectDetail = () => {
                       </div>
                     </div>
 
-                    {/* Two images in grid below */}
+                    {/* Two images in grid below - Lazy loaded GIFs (127MB total) */}
                     <div className='grid md:grid-cols-2 gap-6'>
                       {set.visual.map((img, idx) => (
                         <div
                           key={idx}
                           className='card-glass rounded-3xl overflow-hidden'
                         >
-                          <img
+                          <LazyImage
                             src={`/personal-portfolio/media/projects/fyp/${img}`}
                             alt={`${set.title} - ${idx + 1}`}
                             className='w-full h-auto'
+                            threshold={0.1}
+                            rootMargin='100px'
                           />
                         </div>
                       ))}
@@ -940,10 +952,12 @@ export const ThesisProjectDetail = () => {
               <div className='card-glass rounded-3xl overflow-hidden'>
                 <div className='aspect-video bg-[var(--brand-scale-3-light)] flex items-center justify-center'>
                   <div className='text-center'>
-                    <img
+                    <LazyImage
                       src='/personal-portfolio/media/projects/fyp/participant-move.gif'
                       alt='Traditional Breathing Exercise'
                       className='w-full h-full object-cover aspect-video'
+                      threshold={0.1}
+                      rootMargin='100px'
                     />
                   </div>
                 </div>
