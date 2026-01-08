@@ -518,10 +518,20 @@ export const BaseProjectDetail = ({
               <div className='text-center mt-12'>
                 <a
                   href='#home'
-                  className='inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base transition-all hover:scale-105'
+                  className='inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-base border-2 transition-all duration-300'
                   style={{
-                    background: 'var(--accent-600)',
-                    color: 'white'
+                    fontFamily: 'Montserrat, sans-serif',
+                    borderColor: 'var(--accent-600)',
+                    color: 'var(--accent-600)',
+                    backgroundColor: 'transparent'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'var(--accent-600)'
+                    e.currentTarget.style.color = 'white'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent'
+                    e.currentTarget.style.color = 'var(--accent-600)'
                   }}
                 >
                   <svg

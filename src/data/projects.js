@@ -27,27 +27,38 @@ export const gameProjects = [
     role: 'Lead Programmer, Project Manager',
     description:
       'A playful VR journey—farm, harvest, and cook your way from soil to supper',
+    fullDescription:
+      'Harvest & Feast is an immersive VR experience that takes players through the complete journey of food production, from planting seeds to serving a feast. Developed in Unity for Meta Quest, this project combines intuitive VR interactions with engaging gameplay mechanics to create a relaxing yet rewarding farming and cooking simulation.',
     year: '2025',
     teamSize: '5',
     duration: '4 Weeks',
-    tech: 'Unity (C#)',
+    tech: 'Unity (C#), XR Interaction Toolkit, Meta Quest SDK',
     image: '/personal-portfolio/media/thumbnails/vr_farm.webp',
     features: [
-      'Physics-based puzzle mechanics',
-      'Hand-painted artistic environments',
-      'Original soundtrack with adaptive music',
-      'Multiple endings based on player choices',
-      'Collectible system with lore elements'
+      'Sequential interaction system for guided gameplay flow',
+      'Dual-mode XR control supporting both ray and direct interaction',
+      'Coroutine-based plant growth simulation with visual feedback',
+      'Physics-based cooking mechanics with ingredient combinations',
+      'Intuitive inventory management system',
+      'Immersive 3D audio and haptic feedback'
     ],
     responsibilities: [
-      'Developed core movement and physics systems',
-      'Designed and implemented 15+ unique levels',
-      'Created puzzle mechanics and interactions',
-      'Integrated audio system with dynamic triggers',
-      'Optimized performance for mobile platforms'
+      'Designed and implemented sequential interaction framework',
+      'Developed dual-mode XR interaction system',
+      'Created coroutine-based growth simulation mechanics',
+      'Built inventory and item management systems',
+      'Implemented cooking station interaction logic',
+      'Optimized VR performance for Meta Quest hardware',
+      'Led team coordination and project management'
     ],
     gallery: [],
-    links: []
+    links: [
+      {
+        type: 'itch',
+        url: 'https://itch.io/harvest-and-feast',
+        label: 'Download on itch.io'
+      }
+    ]
   },
   {
     id: 3,
@@ -254,19 +265,34 @@ export const otherProjects = [
 /*   {
     id: 1,
     slug: 'flutter-dev', // Unique slug for routing
-    title: 'Flutter App',
-    type: 'VFX',
-    role: 'Digital Artist',
+    title: 'Educational Learning Platform',
+    type: 'Mobile Development',
+    role: 'Flutter Developer',
     description:
-      'A strategy simulation game where players build and manage colonies on distant planets, balancing resources and survival.',
+      'A cross-platform educational mobile application built with Flutter, featuring real-time learning progress tracking, interactive lessons, and personalized user experiences.',
     fullDescription:
-      'Space Colony Simulator challenges players to establish thriving settlements across the galaxy. Manage resources, research technologies, and ensure colonist happiness while dealing with environmental hazards and alien encounters.',
-    teamSize: '5',
-    duration: '4 Weeks',
-    tech: 'Unity (C#)',
+      'An educational learning platform designed to make learning accessible and engaging through mobile technology. The app combines modern UI/UX design with powerful features like real-time data synchronization, secure user authentication, and smooth animations to create an intuitive learning experience for students.',
+    year: '2024',
+    teamSize: '4',
+    duration: '8 Weeks',
+    tech: 'Flutter (Dart), Firebase, REST API',
     image: '/personal-portfolio/media/thumbnails/hex_war.png',
-    features: [],
-    responsibilities: [],
+    features: [
+      'Secure user authentication with email and social login',
+      'Real-time progress tracking and analytics',
+      'Interactive lessons with multimedia content',
+      'Smooth animations and custom UI components',
+      'Offline mode with data synchronization',
+      'Push notifications for reminders and updates'
+    ],
+    responsibilities: [
+      'Developed responsive UI components using Flutter widgets',
+      'Implemented user authentication and session management',
+      'Integrated Firebase for real-time data synchronization',
+      'Created custom animations and transitions',
+      'Collaborated with backend team for API integration',
+      'Conducted testing and bug fixes across iOS and Android'
+    ],
     gallery: [],
     links: []
   },
@@ -307,7 +333,30 @@ export const otherProjects = [
     responsibilities: [],
     gallery: [],
     links: []
-  } */
+  }, */
+  {
+    id: 4,
+    slug: 'thesis-project', // Unique slug for routing
+    title: 'Final Year Project Thesis',
+    type: 'Research Project',
+    role: 'Researcher, Developer',
+    description:
+      'A immersive VR serious game that turns breathing exercises into an engaging story-driven experience for anxiety management. The project examined how narrative elements influence user engagement and evaluated the game\'s therapeutic effects on anxiety relief.',
+    fullDescription:
+      '',
+    year: '2024',
+    teamSize: '1',
+    duration: '8 Months',
+    tech: 'Unity3D, C#',
+    image: '/personal-portfolio/media/thumbnails/thesis_cover.webp',
+    image2: '/personal-portfolio/media/thumbnails/thesis_cover2.webp',
+    features: [
+    ],
+    responsibilities: [
+    ],
+    gallery: [],
+    links: []
+  }
 ]
 
 // Featured Projects (shown on homepage)
@@ -331,7 +380,7 @@ export const featuredProjects = [
     gallery: [],
     links: []
   },
-    {
+  {
     id: 2,
     slug: '3d-model', // Unique slug for routing
     title: 'Autumn Theme Modeling',
@@ -351,5 +400,28 @@ export const featuredProjects = [
     gallery: [],
     links: []
   },
+    {
+    id: 3,
+    slug: 'thesis-project', // Unique slug for routing
+    title: 'Final Year Project Thesis',
+    type: 'Research Project',
+    role: 'Researcher, Developer',
+    description:
+      'A immersive VR serious game that turns breathing exercises into an engaging story-driven experience for anxiety management. The project examined how narrative elements influence user engagement and evaluated the game\'s therapeutic effects on anxiety relief.',
+    fullDescription:
+      '',
+    year: '2024',
+    teamSize: '1',
+    duration: '8 Months',
+    tech: 'Unity3D, C#',
+    image: '/personal-portfolio/media/thumbnails/thesis_cover.webp',
+    image2: '/personal-portfolio/media/thumbnails/thesis_cover2.webp',
+    features: [
+    ],
+    responsibilities: [
+    ],
+    gallery: [],
+    links: []
+  }
   // Add more featured projects here
 ]

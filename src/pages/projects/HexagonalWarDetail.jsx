@@ -1,5 +1,6 @@
 import { BaseProjectDetail } from './BaseProjectDetail'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
+import { ProjectSidebar } from '../../components/ProjectSidebar'
 import { gameProjects } from '../../data/projects'
 import { StaggerReveal } from '../../components/StaggerReveal'
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -15,6 +16,18 @@ export const HexagonalWarDetail = () => {
   // Card showcase state
   const [activeCategory, setActiveCategory] = useState('Destruction')
   const [activeSubcategory, setActiveSubcategory] = useState('Fire')
+
+  // Define sidebar sections
+  const sidebarSections = [
+    { id: 'inspiration', label: 'Inspiration' },
+    { id: 'references', label: 'References' },
+    { id: 'gameflow', label: 'Game Flow' },
+    { id: 'cards', label: 'Card Design' },
+    { id: 'materials', label: 'Materials' },
+    { id: 'process', label: 'Process' },
+    { id: 'feedback', label: 'Feedback' },
+    { id: 'gallery', label: 'Gallery' }
+  ]
 
   // Card data configuration
   const cardData = {
@@ -180,8 +193,8 @@ export const HexagonalWarDetail = () => {
   // Reusable style definitions for modular components
   const styles = {
     sectionTitle: {
-      className: 'text-xl md:text-2xl font-bold mb-4',
-      style: { color: 'var(--brand-scale-12-light)' }
+      className: 'text-3xl md:text-4xl font-bold mb-6',
+      style: { color: 'var(--accent-800)' }
     },
     sectionSubtitle: {
       className: 'text-lg mb-12',
@@ -276,9 +289,12 @@ export const HexagonalWarDetail = () => {
   // Custom sections for this specific project
   const customSections = (
     <>
+      {/* Sidebar Navigation */}
+      <ProjectSidebar sections={sidebarSections} />
+
       {/* inspiration Section*/}
       <StaggerReveal>
-        <div className='grid md:grid-cols-2 gap-6 mt-50 items-center'>
+        <div id='inspiration' className='grid md:grid-cols-2 gap-6 mt-50 items-center'>
           {/*Left Cover*/}
           <div
             className='relative rounded-3xl overflow-hidden p-6 flex items-end min-h-[400px]'
@@ -319,7 +335,7 @@ export const HexagonalWarDetail = () => {
 
       {/* The Game Reference Section */}
       <RevealOnScroll>
-        <div className='mt-20'>
+        <div id='references' className='mt-20'>
           <h3
             className={styles.sectionTitle.className}
             style={styles.sectionTitle.style}
@@ -478,10 +494,10 @@ export const HexagonalWarDetail = () => {
       </RevealOnScroll>
 
       {/* Game Flow Section */}
-      <section ref={gameStartRef} className='mt-20'>
+      <section id='gameflow' ref={gameStartRef} className='mt-20'>
         {/* Title：移动端正常流式，桌面端 sticky + 滚动到末尾渐隐 */}
         <motion.div
-          className='pb-4 md:pb-6 md:sticky md:top-24 z-20'
+          className='pb-8 md:pb-6 md:sticky md:top-16 z-20'
           style={{
             background: 'var(--background)',
             opacity: titleOpacity,
@@ -954,7 +970,7 @@ export const HexagonalWarDetail = () => {
 
       {/* Card Design Section */}
       <RevealOnScroll>
-        <div className='mt-20'>
+        <div id='cards' className='mt-20'>
           <h3
             className={styles.sectionTitle.className}
             style={styles.sectionTitle.style}
@@ -1081,7 +1097,7 @@ export const HexagonalWarDetail = () => {
 
       {/* Other Materials Section */}
       <RevealOnScroll>
-        <div className='mt-20'>
+        <div id='materials' className='mt-20'>
           <h3
             className={styles.sectionTitle.className}
             style={styles.sectionTitle.style}
@@ -1161,7 +1177,7 @@ export const HexagonalWarDetail = () => {
 
       {/* The Process Section */}
       <RevealOnScroll>
-        <div className='mt-20'>
+        <div id='process' className='mt-20'>
           <h3
             className={styles.sectionTitle.className}
             style={styles.sectionTitle.style}
@@ -1387,7 +1403,7 @@ export const HexagonalWarDetail = () => {
       </RevealOnScroll>
 
       {/* Player Testing Section */}
-      <div className='mt-20'>
+      <div id='feedback' className='mt-20'>
         <RevealOnScroll>
           <h3
             className={styles.sectionTitle.className}
@@ -1434,7 +1450,7 @@ export const HexagonalWarDetail = () => {
 
       {/* Final Display Gallery Section */}
       <RevealOnScroll>
-        <div className='mt-20'>
+        <div id='gallery' className='mt-20'>
           <h3
             className={styles.sectionTitle.className}
             style={styles.sectionTitle.style}

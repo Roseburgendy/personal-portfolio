@@ -1,10 +1,23 @@
 import { BaseProjectDetail } from './BaseProjectDetail'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
 import { StaggerReveal } from '../../components/StaggerReveal'
+import { ProjectSidebar } from '../../components/ProjectSidebar'
 import { artProjects } from '../../data/projects'
 
 export const ThreeDModelDetail = () => {
   const project = artProjects.find(p => p.slug === '3d-model')
+
+  // Define sidebar sections
+  const sidebarSections = [
+    { id: 'inspiration', label: 'Inspiration' },
+    { id: 'castle', label: 'Autumn Castle' },
+    { id: 'castle-references', label: 'Castle References' },
+    { id: 'castle-process', label: 'Castle Process' },
+    { id: 'castle-showcase', label: 'Castle Showcase' },
+    { id: 'witch', label: 'Autumn Witch' },
+    { id: 'witch-process', label: 'Witch Process' },
+    { id: 'witch-showcase', label: 'Witch Showcase' }
+  ]
 
   // Style definitions for consistency
   const styles = {
@@ -28,9 +41,12 @@ export const ThreeDModelDetail = () => {
 
   const customSections = (
     <div className='mt-12'>
+      {/* Sidebar Navigation */}
+      <ProjectSidebar sections={sidebarSections} />
+
       {/* Inspiration & Story Section */}
       <StaggerReveal>
-        <div className='grid md:grid-cols-2 gap-6 mt-20 items-center'>
+        <div id='inspiration' className='grid md:grid-cols-2 gap-6 mt-20 items-center'>
           {/*Left Cover*/}
           <div
             className='relative rounded-3xl p-6 flex items-end min-h-[400px]'
@@ -91,7 +107,7 @@ export const ThreeDModelDetail = () => {
       </StaggerReveal>
 
       {/* AUTUMN CASTLE Section */}
-      <div className='mb-32'>
+      <div id='castle' className='mb-32'>
         <RevealOnScroll>
           <h2
             className='text-2xl md:text-4xl font-bold mb-16 text-center'
@@ -103,7 +119,7 @@ export const ThreeDModelDetail = () => {
 
         {/* Reference & Inspirations */}
         <RevealOnScroll>
-          <div className='mt-20'>
+          <div id='castle-references' className='mt-20'>
             <h3
               className={styles.sectionTitle.className}
               style={styles.sectionTitle.style}
@@ -179,7 +195,7 @@ export const ThreeDModelDetail = () => {
 
         {/* Development Process */}
         <RevealOnScroll>
-          <div className='mt-20'>
+          <div id='castle-process' className='mt-20'>
             <h3
               className={styles.subsectionTitle.className}
               style={styles.subsectionTitle.style}
@@ -462,7 +478,7 @@ export const ThreeDModelDetail = () => {
 
         {/* Final Showcase - Castle */}
         <RevealOnScroll>
-          <div className='mt-20'>
+          <div id='castle-showcase' className='mt-20'>
             <h3
               className={styles.subsectionTitle.className}
               style={styles.subsectionTitle.style}
@@ -526,7 +542,7 @@ export const ThreeDModelDetail = () => {
       </div>
 
       {/* AUTUMN WITCH Section */}
-      <div className='mb-32'>
+      <div id='witch' className='mb-32'>
         <RevealOnScroll>
           <h2
             className='text-2xl md:text-4xl font-bold mb-16 text-center'
@@ -538,7 +554,7 @@ export const ThreeDModelDetail = () => {
 
         {/* Development Process */}
         <RevealOnScroll>
-          <div className='mt-20'>
+          <div id='witch-process' className='mt-20'>
             <h3
               className={styles.subsectionTitle.className}
               style={styles.subsectionTitle.style}
@@ -811,7 +827,7 @@ export const ThreeDModelDetail = () => {
 
         {/* Final Showcase - Witch */}
         <RevealOnScroll>
-          <div className='mt-20'>
+          <div id='witch-showcase' className='mt-20'>
             <h3
               className={styles.subsectionTitle.className}
               style={styles.subsectionTitle.style}
