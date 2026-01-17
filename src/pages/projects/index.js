@@ -9,6 +9,7 @@ import { ThreeDModelDetail } from "./ThreeDModelDetail";
 import { FlutterDevDetail } from "./FlutterDevDetail";
 import { VRFarmDetail } from "./VRFarmDetail";
 import { ThesisProjectDetail } from "./ThesisProjectDetail";
+import { AvengerLegacyDetail } from "./AvengerLegacyDetail";
 // Import other custom project detail pages here as you create them
 // import { MysticForestDetail } from "./MysticForestDetail";
 // import { SpaceColonyDetail } from "./SpaceColonyDetail";
@@ -19,6 +20,7 @@ export const projectRegistry = {
   "flutter-dev": FlutterDevDetail,
   "vr-farm": VRFarmDetail,
   "thesis-project": ThesisProjectDetail,
+  "3d-adv": AvengerLegacyDetail,
   // Add more custom project pages here:
   // "mystic-forest": MysticForestDetail,
   // "space-colony": SpaceColonyDetail,

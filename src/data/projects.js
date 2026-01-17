@@ -61,7 +61,7 @@ export const gameProjects = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     slug: '3d-adv', // Unique slug for routing
     title: 'Avenger Legacy',
     type: 'Game Project',
@@ -91,6 +91,7 @@ export const gameProjects = [
     gallery: [],
     links: []
   },
+  
   {
     id: 4,
     slug: '3d-fps', // Unique slug for routing

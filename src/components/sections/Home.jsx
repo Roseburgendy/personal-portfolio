@@ -151,13 +151,16 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className='stagger-item col-span-4 md:col-span-1 card-glass rounded-3xl p-0 hover:shadow-xl transition-shadow overflow-hidden h-[330px] md:min-h-[300px]'>
+              <a
+                href='#about'
+                className='stagger-item col-span-4 md:col-span-1 card-glass rounded-3xl p-0 hover:shadow-xl transition-shadow overflow-hidden h-[330px] md:min-h-[300px] cursor-pointer'
+              >
                 <img
                   src={profile}
                   alt='Wang Ye'
                   className='w-full h-full object-cover'
                 />
-              </div>
+              </a>
 
               {/* Row 2: Bio Card (1/2) : Contact Card (1/2) */}
               <div className='stagger-item col-span-4 md:col-span-2 card-glass rounded-3xl p-8 min-h-[280px]'>
