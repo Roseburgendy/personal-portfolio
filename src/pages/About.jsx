@@ -8,7 +8,7 @@ import { MovieRotations } from '../components/MovieRotations'
 import { GamesRotations } from '../components/GamesRotations'
 import profile from '../assets/profile.webp'
 import { ArrowUpRight, FileText } from 'lucide-react'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaInstagram, FaGithub } from 'react-icons/fa'
 import { schoolHighlights } from '../data/schoolHighlights'
 import { hobbiesImages } from '../data/hobbies'
 import { movies } from '../data/movies'
@@ -208,15 +208,15 @@ export const About = () => {
                       </div>
                     </a>
 
-                    {/* LinkedIn Card */}
+                    {/* GitHub Card */}
                     <a
-                      href='https://www.linkedin.com/in/ye-wang-b385aa314/'
+                      href='https://github.com/Roseburgendy'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='group relative rounded-3xl p-7 transition-all duration-300 overflow-hidden flex flex-col justify-between min-h-[260px]'
                       style={{ backgroundColor: 'var(--brand-scale-3-light)' }}
                       onMouseEnter={e =>
-                        (e.currentTarget.style.backgroundColor = '#0A66C2')
+                        (e.currentTarget.style.backgroundColor = '#24292e')
                       }
                       onMouseLeave={e =>
                         (e.currentTarget.style.backgroundColor =
@@ -226,7 +226,7 @@ export const About = () => {
                       {/* Title + Arrow */}
                       <div className='flex items-start justify-between'>
                         <h3 className='text-lg  font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                          Connect
+                          View
                         </h3>
 
                         <div className='w-10 h-10 rounded-full bg-white flex items-center justify-center transition-all group-hover:bg-white/30'>
@@ -240,11 +240,11 @@ export const About = () => {
                       {/* Bottom */}
                       <div className='flex items-center gap-3 mt-4'>
                         <div className='w-10 h-10 rounded-xl flex items-center justify-center'>
-                          <FaLinkedin className='w-5 h-5 text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' />
+                          <FaGithub className='w-5 h-5 text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' />
                         </div>
 
                         <span className='text-lg font-semibold text-[var(--brand-scale-12-light)] transition-colors group-hover:text-white' style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                          LinkedIn
+                          GitHub
                         </span>
                       </div>
                     </a>
