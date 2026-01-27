@@ -4,7 +4,7 @@ import { Footer } from '../../components/Footer'
 import { RevealOnScroll } from '../../components/RevealOnScroll'
 import { StaggerReveal } from '../../components/StaggerReveal'
 import { ProjectCard } from '../../components/ProjectCard'
-import { FiUser, FiClock, FiCode, FiUsers, FiLayers } from 'react-icons/fi'
+import { FiUser, FiClock, FiCode, FiUsers, FiLayers, FiArrowLeft } from 'react-icons/fi'
 import { gameProjects, artProjects, otherProjects } from '../../data/projects'
 import { preloadImage } from '../../utils/imagePreloader'
 
@@ -87,19 +87,7 @@ export const BaseProjectDetail = ({
               className='inline-flex items-center group text-sm'
               style={{ color: 'var(--muted)' }}
             >
-              <svg
-                className='w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M10 19l-7-7m0 0l7-7m-7 7h18'
-                />
-              </svg>
+              <FiArrowLeft className='w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform' />
               Back to Home
             </a>
           </div>
@@ -545,19 +533,7 @@ export const BaseProjectDetail = ({
                     e.currentTarget.style.color = 'var(--accent-600)'
                   }}
                 >
-                  <svg
-                    className='w-5 h-5'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M10 19l-7-7m0 0l7-7m-7 7h18'
-                    />
-                  </svg>
+                  <FiArrowLeft className='w-5 h-5' />
                   Back to Home
                 </a>
               </div>
