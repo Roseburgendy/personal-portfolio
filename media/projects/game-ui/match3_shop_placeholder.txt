@@ -1,0 +1,4 @@
+PLACEHOLDER: Match-3 Game Shop UI
+
+Replace this file with: match3_shop.webp
+Should show the in-game shop or store interface

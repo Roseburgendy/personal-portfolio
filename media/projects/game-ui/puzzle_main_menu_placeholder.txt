@@ -1,0 +1,4 @@
+PLACEHOLDER: Puzzle Game Main Menu UI
+
+Replace this file with: puzzle_main_menu.webp
+Should show the main menu screen of the puzzle game

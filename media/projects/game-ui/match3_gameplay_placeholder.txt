@@ -1,0 +1,4 @@
+PLACEHOLDER: Match-3 Game Gameplay UI
+
+Replace this file with: match3_gameplay.webp
+Should show the gameplay screen with UI elements
