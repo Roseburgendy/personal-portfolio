@@ -1,0 +1,5 @@
+PLACEHOLDER: Replace this file with your game UI design thumbnail image.
+
+File should be named: game_ui_design.webp
+Recommended size: 400x300px or similar aspect ratio
+Should showcase both match-3 and puzzle game UI designs

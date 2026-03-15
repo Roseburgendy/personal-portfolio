@@ -17,8 +17,59 @@ export const gameProjects = [
     features: [],
     responsibilities: [],
     gallery: [],
-    links: []
+    links: [],
+    // New: Define sections for dynamic rendering
+    detailSections: [
+      { type: 'hero', layout: 'default' },
+      { type: 'overview' },
+      { type: 'features' },
+      { type: 'responsibilities' },
+      { type: 'gallery' },
+      { type: 'links' }
+    ]
   },
+/*   {
+    id: 2,
+    slug: 'game-ui-design', // Unique slug for routing
+    title: 'Mobile Game UI Design',
+    type: 'UI/UX Design',
+    role: 'UI Designer',
+    description:
+      'Complete UI design system for two mobile games featuring match-3 and puzzle gameplay. Includes responsive layouts, intuitive navigation, and engaging visual elements optimized for touch interactions.',
+    fullDescription:
+      'A comprehensive UI design project for two mobile game concepts: a match-3 puzzle game and a brain-teasing puzzle game. The design focuses on creating an intuitive and visually appealing interface that enhances player engagement while maintaining clear usability principles. Each game features distinct visual themes while sharing a cohesive design language that ensures brand consistency across the gaming experience.',
+    teamSize: '1',
+    year: '2024',
+    duration: '6 Weeks',
+    tech: 'Figma, Adobe Illustrator, Principle',
+    image: '/personal-portfolio/media/thumbnails/game_ui_design.webp',
+    features: [
+      'Responsive UI layouts for multiple screen sizes',
+      'Intuitive touch-based navigation system',
+      'Consistent design language across both games',
+      'Engaging visual feedback and animations',
+      'Accessibility-focused color schemes and typography',
+      'Optimized for both portrait and landscape orientations'
+    ],
+    responsibilities: [
+      'Created comprehensive UI design system',
+      'Designed user flows and interaction patterns',
+      'Developed visual hierarchy and information architecture',
+      'Ensured cross-platform compatibility',
+      'Implemented accessibility guidelines',
+      'Created interactive prototypes for user testing'
+    ],
+    gallery: [
+      '/personal-portfolio/media/projects/game-ui/match3_main_menu.webp',
+      '/personal-portfolio/media/projects/game-ui/match3_gameplay.webp',
+      '/personal-portfolio/media/projects/game-ui/match3_shop.webp',
+      '/personal-portfolio/media/projects/game-ui/puzzle_main_menu.webp',
+      '/personal-portfolio/media/projects/game-ui/puzzle_levels.webp',
+      '/personal-portfolio/media/projects/game-ui/puzzle_gameplay.webp'
+    ],
+    links: []
+    // Note: This project uses a custom component (GameUIDetail) instead of detailSections
+  }, */
 /*   {
     id: 2,
     slug: 'vr-farm', // Unique slug for routing
@@ -238,7 +289,13 @@ export const artProjects = [
     features: [],
     responsibilities: [],
     gallery: [],
-    links: []
+    links: [],
+    // New: Define sections for dynamic rendering
+    detailSections: [
+      { type: 'hero', layout: 'default' },
+      { type: 'overview' },
+      { type: 'gallery' }
+    ]
   },
 /*   {
     id: 2,

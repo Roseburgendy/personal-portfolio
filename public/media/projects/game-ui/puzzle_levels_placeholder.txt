@@ -1,0 +1,4 @@
+PLACEHOLDER: Puzzle Game Levels Selection UI
+
+Replace this file with: puzzle_levels.webp
+Should show the level selection screen

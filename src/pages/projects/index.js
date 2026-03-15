@@ -1,7 +1,7 @@
 /**
  * Project Registry
  * Maps project slugs to their custom detail page components
- * If a project doesn't have a custom page, it will use BaseProjectDetail with default sections
+ * If a project doesn't have a custom page, it will use DynamicProjectDetail with default sections
  */
 
 import { HexagonalWarDetail } from "./HexagonalWarDetail";
@@ -10,6 +10,8 @@ import { FlutterDevDetail } from "./FlutterDevDetail";
 import { VRFarmDetail } from "./VRFarmDetail";
 import { ThesisProjectDetail } from "./ThesisProjectDetail";
 import { AvengerLegacyDetail } from "./AvengerLegacyDetail";
+import { GameUIDetail } from "./GameUIDetail";
+import { DynamicProjectDetail } from "./DynamicProjectDetail";
 // Import other custom project detail pages here as you create them
 // import { MysticForestDetail } from "./MysticForestDetail";
 // import { SpaceColonyDetail } from "./SpaceColonyDetail";
@@ -21,6 +23,7 @@ export const projectRegistry = {
   "vr-farm": VRFarmDetail,
   "thesis-project": ThesisProjectDetail,
   "3d-adv": AvengerLegacyDetail,
+  "game-ui-design": GameUIDetail,
   // Add more custom project pages here:
   // "mystic-forest": MysticForestDetail,
   // "space-colony": SpaceColonyDetail,
@@ -34,3 +37,5 @@ export const projectRegistry = {
 export const getProjectDetailComponent = (slug) => {
   return projectRegistry[slug] || null;
 };
+
+export { DynamicProjectDetail };
