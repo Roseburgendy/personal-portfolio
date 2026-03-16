@@ -6,58 +6,58 @@
 export const games = [
   {
     title: "The Last Campfire",
-    cover: "/personal-portfolio/media/games/game_camp.webp"
+    cover: "/media/games/game_camp.webp"
   },
   {
     title: "DEEMO II ",
-    cover: "/personal-portfolio/media/games/game_deemo.webp"
+    cover: "/media/games/game_deemo.webp"
   },
   {
     title: "DEEMO",
-    cover: "/personal-portfolio/media/games/game_deemo1.webp"
+    cover: "/media/games/game_deemo1.webp"
   },
   {
     title: "Destiny 2",
-    cover: "/personal-portfolio/media/games/game_destiny2.webp"
+    cover: "/media/games/game_destiny2.webp"
   },
   {
     title: "GRIS",
-    cover: "/personal-portfolio/media/games/game_gris.webp"
+    cover: "/media/games/game_gris.webp"
   },
   {
     title: "It Takes Two",
-    cover: "/personal-portfolio/media/games/game_it.webp"
+    cover: "/media/games/game_it.webp"
   },
   {
     title: "Minecraft",
-    cover: "/personal-portfolio/media/games/game_minecraft.webp"
+    cover: "/media/games/game_minecraft.webp"
   },
   {
     title: "Monument Valley",
-    cover: "/personal-portfolio/media/games/game_monument.webp"
+    cover: "/media/games/game_monument.webp"
   },
   {
     title: "Little Nightmare",
-    cover: "/personal-portfolio/media/games/game_nightmare.webp"
+    cover: "/media/games/game_nightmare.webp"
   },
   {
     title: "No Man's Sky",
-    cover: "/personal-portfolio/media/games/game_noman.webp"
+    cover: "/media/games/game_noman.webp"
   },
   {
     title: "Sky",
-    cover: "/personal-portfolio/media/games/game_sky.webp"
+    cover: "/media/games/game_sky.webp"
   },
   {
     title: "Journey",
-    cover: "/personal-portfolio/media/games/game_journey.webp"
+    cover: "/media/games/game_journey.webp"
   },
     {
     title: "Flower",
-    cover: "/personal-portfolio/media/games/game_flower.webp"
+    cover: "/media/games/game_flower.webp"
   },
       {
     title: "Gogh",
-    cover: "/personal-portfolio/media/games/game_gogh.webp"
+    cover: "/media/games/game_gogh.webp"
   }
 ];

@@ -74,7 +74,7 @@ export const useImagePreloader = (imageUrls, enabled = true) => {
  * @returns {string[]} - Array of critical image URLs to preload
  */
 export const getCriticalImages = projectSlug => {
-  const basePath = '/personal-portfolio/media'
+  const basePath = '/media'
 
   const criticalImages = {
     'hexagonal-war': [

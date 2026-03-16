@@ -41,7 +41,7 @@ export const VRFarmDetail = () => {
     {
       id: 'cultivation',
       title: '🌱 Cultivation',
-      video: '/personal-portfolio/media/projects/vr-farm/mechanics/cultivation.gif',
+      video: '/media/projects/vr-farm/mechanics/cultivation.gif',
       description: 'Players use VR controllers to dig holes and plant seeds in designated farming areas.',
       highlights: [
         'Intuitive grab-and-plant interaction using XR Direct Interactor',
@@ -53,7 +53,7 @@ export const VRFarmDetail = () => {
     {
       id: 'watering',
       title: '💧 Watering',
-      video: '/personal-portfolio/media/projects/vr-farm/mechanics/watering.gif',
+      video: '/media/projects/vr-farm/mechanics/watering.gif',
       description: 'A watering can with physics-based liquid simulation allows players to water their crops naturally.',
       highlights: [
         'Tilt-based water flow using transform rotation detection',
@@ -65,7 +65,7 @@ export const VRFarmDetail = () => {
     {
       id: 'growth',
       title: '🌿 Growth System',
-      video: '/personal-portfolio/media/projects/vr-farm/mechanics/growth.gif',
+      video: '/media/projects/vr-farm/mechanics/growth.gif',
       description: 'Plants grow through multiple stages with smooth transitions and visual indicators.',
       highlights: [
         'Coroutine-based time progression system',
@@ -77,7 +77,7 @@ export const VRFarmDetail = () => {
     {
       id: 'puzzle',
       title: '🧩 Puzzle Mechanic',
-      video: '/personal-portfolio/media/projects/vr-farm/mechanics/puzzle.gif',
+      video: '/media/projects/vr-farm/mechanics/puzzle.gif',
       description: 'Level 2 introduces recipe-based puzzles where players must grow specific ingredients.',
       highlights: [
         'Recipe cards display required ingredients visually',
@@ -89,7 +89,7 @@ export const VRFarmDetail = () => {
     {
       id: 'inventory',
       title: '🎒 Inventory System',
-      video: '/personal-portfolio/media/projects/vr-farm/mechanics/inventory.gif',
+      video: '/media/projects/vr-farm/mechanics/inventory.gif',
       description: 'Harvested crops are automatically added to an accessible inventory interface.',
       highlights: [
         'Scriptable Object architecture for item data management',
@@ -101,7 +101,7 @@ export const VRFarmDetail = () => {
     {
       id: 'cooking',
       title: '🍳 Cooking Stations',
-      video: '/personal-portfolio/media/projects/vr-farm/mechanics/cooking.gif',
+      video: '/media/projects/vr-farm/mechanics/cooking.gif',
       description: 'Multiple cooking stations allow players to combine ingredients and create dishes.',
       highlights: [
         'Drag-and-drop ingredient placement system',
@@ -139,7 +139,7 @@ export const VRFarmDetail = () => {
   const technicalSystems = [
     {
       title: 'Sequential Interaction System',
-      thumbnail: '/personal-portfolio/media/projects/vr-farm/tech/sequential.png',
+      thumbnail: '/media/projects/vr-farm/tech/sequential.png',
       description: 'A state machine that guides players through ordered gameplay steps',
       implementation: 'Event-driven architecture with Unity Events and ScriptableObject states',
       codeSnippet: `public class SequentialInteractionManager : MonoBehaviour
@@ -171,7 +171,7 @@ export const VRFarmDetail = () => {
     },
     {
       title: 'Dual-Mode XR Control',
-      thumbnail: '/personal-portfolio/media/projects/vr-farm/tech/xr-control.png',
+      thumbnail: '/media/projects/vr-farm/tech/xr-control.png',
       description: 'Seamless switching between ray-based and direct hand interaction',
       implementation: 'XR Interaction Toolkit with custom interactor toggle system',
       codeSnippet: `public class DualModeController : MonoBehaviour
@@ -217,7 +217,7 @@ export const VRFarmDetail = () => {
     },
     {
       title: 'Coroutine-Based Growth Simulation',
-      thumbnail: '/personal-portfolio/media/projects/vr-farm/tech/growth.png',
+      thumbnail: '/media/projects/vr-farm/tech/growth.png',
       description: 'Realistic plant growth over time with smooth visual transitions',
       implementation: 'Coroutine system with lerp-based scaling and state management',
       codeSnippet: `public class PlantGrowth : MonoBehaviour

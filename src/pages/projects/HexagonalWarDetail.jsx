@@ -43,39 +43,39 @@ export const HexagonalWarDetail = () => {
           {
             id: 1,
             name: 'Fire Card 1',
-            image: '/personal-portfolio/media/projects/hex/cards/fire-1.webp'
+            image: '/media/projects/hex/cards/fire-1.webp'
           },
           {
             id: 2,
             name: 'Fire Card 2',
-            image: '/personal-portfolio/media/projects/hex/cards/fire-2.webp'
+            image: '/media/projects/hex/cards/fire-2.webp'
           },
           {
             id: 3,
             name: 'Fire Card 3',
-            image: '/personal-portfolio/media/projects/hex/cards/fire-3.webp'
+            image: '/media/projects/hex/cards/fire-3.webp'
           },
           {
             id: 4,
             name: 'Fire Card 4',
-            image: '/personal-portfolio/media/projects/hex/cards/fire-4.webp'
+            image: '/media/projects/hex/cards/fire-4.webp'
           }
         ],
         Acid: [
           {
             id: 5,
             name: 'Acid Card 1',
-            image: '/personal-portfolio/media/projects/hex/cards/acid-1.webp'
+            image: '/media/projects/hex/cards/acid-1.webp'
           },
           {
             id: 6,
             name: 'Acid Card 2',
-            image: '/personal-portfolio/media/projects/hex/cards/acid-2.webp'
+            image: '/media/projects/hex/cards/acid-2.webp'
           },
           {
             id: 7,
             name: 'Acid Card 3',
-            image: '/personal-portfolio/media/projects/hex/cards/acid-3.webp'
+            image: '/media/projects/hex/cards/acid-3.webp'
           }
         ]
       }
@@ -91,25 +91,25 @@ export const HexagonalWarDetail = () => {
             id: 8,
             name: 'Extinguisher 1',
             image:
-              '/personal-portfolio/media/projects/hex/cards/extinguisher-1.webp'
+              '/media/projects/hex/cards/extinguisher-1.webp'
           },
           {
             id: 9,
             name: 'Extinguisher 2',
             image:
-              '/personal-portfolio/media/projects/hex/cards/extinguisher-2.webp'
+              '/media/projects/hex/cards/extinguisher-2.webp'
           },
           {
             id: 10,
             name: 'Extinguisher 3',
             image:
-              '/personal-portfolio/media/projects/hex/cards/extinguisher-3.webp'
+              '/media/projects/hex/cards/extinguisher-3.webp'
           },
           {
             id: 11,
             name: 'Extinguisher 4',
             image:
-              '/personal-portfolio/media/projects/hex/cards/extinguisher-4.webp'
+              '/media/projects/hex/cards/extinguisher-4.webp'
           }
         ],
         'Acid Elimination': [
@@ -117,19 +117,19 @@ export const HexagonalWarDetail = () => {
             id: 12,
             name: 'Elimination 1',
             image:
-              '/personal-portfolio/media/projects/hex/cards/elimination-1.webp'
+              '/media/projects/hex/cards/elimination-1.webp'
           },
           {
             id: 13,
             name: 'Elimination 2',
             image:
-              '/personal-portfolio/media/projects/hex/cards/elimination-2.webp'
+              '/media/projects/hex/cards/elimination-2.webp'
           },
           {
             id: 14,
             name: 'Elimination 3',
             image:
-              '/personal-portfolio/media/projects/hex/cards/elimination-3.webp'
+              '/media/projects/hex/cards/elimination-3.webp'
           }
         ]
       }
@@ -144,12 +144,12 @@ export const HexagonalWarDetail = () => {
           {
             id: 15,
             name: 'Item 1',
-            image: '/personal-portfolio/media/projects/hex/cards/item-1.webp'
+            image: '/media/projects/hex/cards/item-1.webp'
           },
           {
             id: 16,
             name: 'Item 2',
-            image: '/personal-portfolio/media/projects/hex/cards/item-2.webp'
+            image: '/media/projects/hex/cards/item-2.webp'
           }
         ]
       }
@@ -164,17 +164,17 @@ export const HexagonalWarDetail = () => {
           {
             id: 16,
             name: 'Skill 1',
-            image: '/personal-portfolio/media/projects/hex/cards/skill-1.webp'
+            image: '/media/projects/hex/cards/skill-1.webp'
           },
           {
             id: 17,
             name: 'Skill 2',
-            image: '/personal-portfolio/media/projects/hex/cards/skill-2.webp'
+            image: '/media/projects/hex/cards/skill-2.webp'
           },
           {
             id: 18,
             name: 'Skill 3',
-            image: '/personal-portfolio/media/projects/hex/cards/skill-3.webp'
+            image: '/media/projects/hex/cards/skill-3.webp'
           }
         ]
       }
@@ -305,7 +305,7 @@ export const HexagonalWarDetail = () => {
             }}
           >
             <img
-              src='/personal-portfolio/media/projects/hex/hex_cover.webp'
+              src='/media/projects/hex/hex_cover.webp'
               alt='hex_cover'
               className='w-full h-full object-contain'
             />
@@ -365,7 +365,7 @@ export const HexagonalWarDetail = () => {
               {/* Photo */}
               <div className='relative bg-[#f2d7d7]/30 h-48'>
                 <img
-                  src='/personal-portfolio/media/projects/hex/hex_ref_catan.webp'
+                  src='/media/projects/hex/hex_ref_catan.webp'
                   alt='Process reference 1'
                   className='w-full h-full object-cover'
                 />
@@ -409,7 +409,7 @@ export const HexagonalWarDetail = () => {
               {/* Photo */}
               <div className='relative bg-[#f2d7d7]/30 h-48'>
                 <img
-                  src='/personal-portfolio/media/projects/hex/hex_ref_heart.webp'
+                  src='/media/projects/hex/hex_ref_heart.webp'
                   alt='Process reference 2'
                   className='w-full h-full object-cover'
                 />
@@ -453,7 +453,7 @@ export const HexagonalWarDetail = () => {
               {/* Photo */}
               <div className='relative bg-[#f2d7d7]/30 h-48'>
                 <img
-                  src='/personal-portfolio/media/projects/hex/hex_ref_love.webp'
+                  src='/media/projects/hex/hex_ref_love.webp'
                   alt='Process reference 3'
                   className='w-full h-full object-cover'
                 />
@@ -532,22 +532,22 @@ export const HexagonalWarDetail = () => {
             }}
           >
             <img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_base.webp'
+              src='/media/projects/hex/gameflow_step1_base.webp'
               alt='Game board base'
               className='absolute inset-0 w-full h-full object-contain p-2'
             />
             <img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_layer1.webp'
+              src='/media/projects/hex/gameflow_step1_layer1.webp'
               alt='Board arrangement layer'
               className='absolute inset-0 w-full h-full object-contain p-2'
             />
             <img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_layer2.webp'
+              src='/media/projects/hex/gameflow_step1_layer2.webp'
               alt='Player seats layer'
               className='absolute inset-0 w-full h-full object-contain p-2'
             />
             <img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_layer3.webp'
+              src='/media/projects/hex/gameflow_step1_layer3.webp'
               alt='Jewels layer'
               className='absolute inset-0 w-full h-full object-contain p-2'
             />
@@ -581,7 +581,7 @@ export const HexagonalWarDetail = () => {
               <div className='rounded-2xl bg-[var(--brand-scale-3-light)]/60 p-4'>
                 <div className='flex items-center gap-2 mb-1'>
                   <img
-                    src='/personal-portfolio/media/projects/hex/icons/icon_chess.webp'
+                    src='/media/projects/hex/icons/icon_chess.webp'
                     alt='Arrange board icon'
                     className='w-6 h-6 object-contain'
                   />
@@ -600,7 +600,7 @@ export const HexagonalWarDetail = () => {
               <div className='rounded-2xl bg-[var(--brand-scale-3-light)]/60 p-4'>
                 <div className='flex items-center gap-2 mb-1'>
                   <img
-                    src='/personal-portfolio/media/projects/hex/icons/icon_players.webp'
+                    src='/media/projects/hex/icons/icon_players.webp'
                     alt='Player icon'
                     className='w-6 h-6 object-contain'
                   />
@@ -620,7 +620,7 @@ export const HexagonalWarDetail = () => {
               <div className='rounded-2xl bg-[var(--brand-scale-3-light)]/60 p-4'>
                 <div className='flex items-center gap-2 mb-1'>
                   <img
-                    src='/personal-portfolio/media/projects/hex/icons/icon_cards.webp'
+                    src='/media/projects/hex/icons/icon_cards.webp'
                     alt='Card icon'
                     className='w-6 h-6 object-contain'
                   />
@@ -641,7 +641,7 @@ export const HexagonalWarDetail = () => {
               <div className='rounded-2xl bg-[var(--brand-scale-3-light)]/60 p-4'>
                 <div className='flex items-center gap-2 mb-1'>
                   <img
-                    src='/personal-portfolio/media/projects/hex/icons/icon_jewl.webp'
+                    src='/media/projects/hex/icons/icon_jewl.webp'
                     alt='Jewel icon'
                     className='w-6 h-6 object-contain'
                   />
@@ -685,7 +685,7 @@ export const HexagonalWarDetail = () => {
               decision shapes team coordination and board control.
             </p>
             <img
-              src='/personal-portfolio/media/projects/hex/step2.webp'
+              src='/media/projects/hex/step2.webp'
               alt='Player turn illustration'
               className='w-full object-contain'
             />
@@ -716,7 +716,7 @@ export const HexagonalWarDetail = () => {
             </p>
             <div className='flex justify-center'>
               <img
-                src='/personal-portfolio/media/projects/hex/step3.webp'
+                src='/media/projects/hex/step3.webp'
                 alt='Victory illustration'
                 className='w-6/12 object-contain'
               />
@@ -735,14 +735,14 @@ export const HexagonalWarDetail = () => {
           >
             {/* Base image - always visible */}
             <img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_base.webp'
+              src='/media/projects/hex/gameflow_step1_base.webp'
               alt='Game board base'
               className='absolute inset-0 w-full h-full object-contain p-4'
             />
 
             {/* Layer 1 - appears with bullet 1 */}
             <motion.img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_layer1.webp'
+              src='/media/projects/hex/gameflow_step1_layer1.webp'
               alt='Board arrangement layer'
               className='absolute inset-0 w-full h-full object-contain p-4'
               style={{ opacity: layer1Opacity, y: layer1Y }}
@@ -750,7 +750,7 @@ export const HexagonalWarDetail = () => {
 
             {/* Layer 2 - appears with bullet 2 */}
             <motion.img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_layer2.webp'
+              src='/media/projects/hex/gameflow_step1_layer2.webp'
               alt='Player seats layer'
               className='absolute inset-0 w-full h-full object-contain p-4'
               style={{ opacity: layer2Opacity, y: layer2Y }}
@@ -758,7 +758,7 @@ export const HexagonalWarDetail = () => {
 
             {/* Layer 3 - appears with bullet 3 */}
             <motion.img
-              src='/personal-portfolio/media/projects/hex/gameflow_step1_layer3.webp'
+              src='/media/projects/hex/gameflow_step1_layer3.webp'
               alt='Jewels layer'
               className='absolute inset-0 w-full h-full object-contain p-4'
               style={{ opacity: layer3Opacity, y: layer3Y }}
@@ -805,7 +805,7 @@ export const HexagonalWarDetail = () => {
                   >
                     <div className='flex items-center gap-2 mb-1'>
                       <img
-                        src='/personal-portfolio/media/projects/hex/icons/icon_chess.webp'
+                        src='/media/projects/hex/icons/icon_chess.webp'
                         alt='Arrange board icon'
                         className='w-6 h-6 object-contain'
                       />
@@ -828,7 +828,7 @@ export const HexagonalWarDetail = () => {
                   >
                     <div className='flex items-center gap-2 mb-1'>
                       <img
-                        src='/personal-portfolio/media/projects/hex/icons/icon_players.webp'
+                        src='/media/projects/hex/icons/icon_players.webp'
                         alt='Player icon'
                         className='w-6 h-6 object-contain'
                       />
@@ -852,7 +852,7 @@ export const HexagonalWarDetail = () => {
                   >
                     <div className='flex items-center gap-2 mb-1'>
                       <img
-                        src='/personal-portfolio/media/projects/hex/icons/icon_cards.webp'
+                        src='/media/projects/hex/icons/icon_cards.webp'
                         alt='Card icon'
                         className='w-6 h-6 object-contain'
                       />
@@ -877,7 +877,7 @@ export const HexagonalWarDetail = () => {
                   >
                     <div className='flex items-center gap-2 mb-1'>
                       <img
-                        src='/personal-portfolio/media/projects/hex/icons/icon_jewl.webp'
+                        src='/media/projects/hex/icons/icon_jewl.webp'
                         alt='Jewel icon'
                         className='w-6 h-6 object-contain'
                       />
@@ -925,7 +925,7 @@ export const HexagonalWarDetail = () => {
                   board control.
                 </p>
                 <img
-                  src='/personal-portfolio/media/projects/hex/step2.webp'
+                  src='/media/projects/hex/step2.webp'
                   alt='Arrange board icon'
                   className='object-contain'
                 />
@@ -959,7 +959,7 @@ export const HexagonalWarDetail = () => {
                 </p>
                 <div className='flex justify-center mt-10'>
                   <img
-                    src='/personal-portfolio/media/projects/hex/step3.webp'
+                    src='/media/projects/hex/step3.webp'
                     alt='Victory illustration'
                     className='w-6/12 object-contain'
                   />
@@ -990,7 +990,7 @@ export const HexagonalWarDetail = () => {
             {/* Left: Card Detail Image */}
             <div className='card-glass rounded-3xl p-8 flex items-center justify-center h-[450px] md:h-[500px]'>
               <img
-                src='/personal-portfolio/media/projects/hex/cards/cardcomposition.webp'
+                src='/media/projects/hex/cards/cardcomposition.webp'
                 alt='Card design details'
                 className='w-full h-full object-contain'
               />
@@ -1128,7 +1128,7 @@ export const HexagonalWarDetail = () => {
                 </div>
                 <div className='p-6'>
                   <img
-                    src='/personal-portfolio/media/projects/hex/basechess.webp'
+                    src='/media/projects/hex/basechess.webp'
                     alt='Chess pieces design'
                     className='w-full h-auto object-contain'
                   />
@@ -1147,7 +1147,7 @@ export const HexagonalWarDetail = () => {
                 </div>
                 <div className='p-6'>
                   <img
-                    src='/personal-portfolio/media/projects/hex/specialchess.webp'
+                    src='/media/projects/hex/specialchess.webp'
                     alt='Chess pieces details'
                     className='w-full h-auto object-contain'
                   />
@@ -1167,7 +1167,7 @@ export const HexagonalWarDetail = () => {
               </div>
               <div className=' flex-1 flex items-center justify-center'>
                 <img
-                  src='/personal-portfolio/media/projects/hex/modularmap.webp'
+                  src='/media/projects/hex/modularmap.webp'
                   alt='Modular map layout'
                   className='w-full h-full object-contain'
                 />
@@ -1220,7 +1220,7 @@ export const HexagonalWarDetail = () => {
               {/* Image */}
               <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                 <img
-                  src='/personal-portfolio/media/projects/hex/process-1.webp'
+                  src='/media/projects/hex/process-1.webp'
                   alt='Frame 60 process'
                   className='w-full h-full object-cover'
                 />
@@ -1282,7 +1282,7 @@ export const HexagonalWarDetail = () => {
               {/* Image */}
               <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                 <img
-                  src='/personal-portfolio/media/projects/hex/process-2.webp'
+                  src='/media/projects/hex/process-2.webp'
                   alt='Prototype testing'
                   className='w-full h-full object-cover'
                 />
@@ -1346,7 +1346,7 @@ export const HexagonalWarDetail = () => {
               {/* Image */}
               <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                 <img
-                  src='/personal-portfolio/media/projects/hex/process-3.webp'
+                  src='/media/projects/hex/process-3.webp'
                   alt='Gameplay brainstorming'
                   className='w-full h-full object-cover'
                 />
@@ -1395,7 +1395,7 @@ export const HexagonalWarDetail = () => {
             {/* Image */}
             <div className='relative bg-[#f2d7d7]/30 p-6 rounded-2xl'>
               <img
-                src='/personal-portfolio/media/projects/hex/project-timeline.webp'
+                src='/media/projects/hex/project-timeline.webp'
                 alt='Gameplay brainstorming'
                 className='w-full h-full object-cover'
               />
@@ -1428,7 +1428,7 @@ export const HexagonalWarDetail = () => {
           <RevealOnScroll>
             <div className='relative w-full max-w-4xl mx-auto md:px-0'>
               <img
-                src='/personal-portfolio/media/projects/hex/player-feedback.webp'
+                src='/media/projects/hex/player-feedback.webp'
                 alt='Player feedback and game testing session'
                 className='w-full h-auto object-contain'
               />
@@ -1464,21 +1464,21 @@ export const HexagonalWarDetail = () => {
             {/* Row 1 */}
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
               <LazyImage
-                src='/personal-portfolio/media/projects/hex/gallery/top-left.webp'
+                src='/media/projects/hex/gallery/top-left.webp'
                 alt='Item cards display'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
               <LazyImage
-                src='/personal-portfolio/media/projects/hex/gallery/top-center.webp'
+                src='/media/projects/hex/gallery/top-center.webp'
                 alt='Team photo'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
               <LazyImage
-                src='/personal-portfolio/media/projects/hex/gallery/top-right.webp'
+                src='/media/projects/hex/gallery/top-right.webp'
                 alt='Game components'
                 className='w-full h-full object-cover'
               />
@@ -1487,21 +1487,21 @@ export const HexagonalWarDetail = () => {
             {/* Row 2 */}
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
               <LazyImage
-                src='/personal-portfolio/media/projects/hex/gallery/bottom-left.webp'
+                src='/media/projects/hex/gallery/bottom-left.webp'
                 alt='Card collection'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
               <LazyImage
-                src='/personal-portfolio/media/projects/hex/gallery/bottom-center.webp'
+                src='/media/projects/hex/gallery/bottom-center.webp'
                 alt='Game board setup'
                 className='w-full h-full object-cover'
               />
             </div>
             <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
               <LazyImage
-                src='/personal-portfolio/media/projects/hex/gallery/bottom-right.webp'
+                src='/media/projects/hex/gallery/bottom-right.webp'
                 alt='Hexagonal tiles'
                 className='w-full h-full object-cover'
               />

@@ -41,17 +41,17 @@ export const GameUIDetail = () => {
       {
         title: 'Main Menu',
         description: 'Clean, welcoming interface with game logo, play button, and navigation options',
-        image: '/personal-portfolio/media/projects/game-ui/match3_main_menu.webp'
+        image: '/media/projects/game-ui/match3_main_menu.webp'
       },
       {
         title: 'Gameplay Screen',
         description: 'Focused gameplay area with score display, moves counter, and intuitive controls',
-        image: '/personal-portfolio/media/projects/game-ui/match3_gameplay.webp'
+        image: '/media/projects/game-ui/match3_gameplay.webp'
       },
       {
         title: 'Shop Interface',
         description: 'In-game store with currency display, item categories, and purchase options',
-        image: '/personal-portfolio/media/projects/game-ui/match3_shop.webp'
+        image: '/media/projects/game-ui/match3_shop.webp'
       }
     ]
   }
@@ -70,17 +70,17 @@ export const GameUIDetail = () => {
       {
         title: 'Main Menu',
         description: 'Minimalist design focusing on level progression and game statistics',
-        image: '/personal-portfolio/media/projects/game-ui/puzzle_main_menu.webp'
+        image: '/media/projects/game-ui/puzzle_main_menu.webp'
       },
       {
         title: 'Level Selection',
         description: 'Grid-based level selection with completion status and difficulty indicators',
-        image: '/personal-portfolio/media/projects/game-ui/puzzle_levels.webp'
+        image: '/media/projects/game-ui/puzzle_levels.webp'
       },
       {
         title: 'Gameplay Interface',
         description: 'Clean puzzle area with timer, hint button, and progress indicators',
-        image: '/personal-portfolio/media/projects/game-ui/puzzle_gameplay.webp'
+        image: '/media/projects/game-ui/puzzle_gameplay.webp'
       }
     ]
   }

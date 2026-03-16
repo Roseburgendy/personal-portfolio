@@ -213,7 +213,7 @@ export const AvengerLegacyDetail = () => {
             <div className='card-glass rounded-3xl overflow-hidden'>
               <div className='aspect-video bg-[var(--brand-scale-3-light)] flex items-center justify-center'>
                 <LazyImage
-                  src='/personal-portfolio/media/projects/avenger/overview.webp'
+                  src='/media/projects/avenger/overview.webp'
                   alt='Avenger Legacy Game Overview'
                   className='w-full h-full object-cover aspect-video'
                 />
@@ -474,7 +474,7 @@ export const AvengerLegacyDetail = () => {
             {/* Movement Demo */}
             <div className='card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/player_control.webp'
+                src='/media/projects/avenger/player_control.webp'
                 alt='Player Control Animation Blend Tree'
                 className='w-full h-full object-cover'
               />
@@ -568,7 +568,7 @@ export const AvengerLegacyDetail = () => {
             {/* Parkour Demo */}
             <div className='md:col-span-3 card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/parkour_system.webp'
+                src='/media/projects/avenger/parkour_system.webp'
                 alt='Parkour System Animation State Machine'
                 className='w-full h-full object-cover'
               />
@@ -579,7 +579,7 @@ export const AvengerLegacyDetail = () => {
           <div className='grid md:grid-cols-2 gap-8'>
             <div className='card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/climb_colliders.webp'
+                src='/media/projects/avenger/climb_colliders.webp'
                 alt='Climb mechanics with invisible colliders'
                 className='w-full h-auto'
               />
@@ -670,7 +670,7 @@ export const AvengerLegacyDetail = () => {
           {/* Combat Animation State Machine */}
           <div className='card-glass rounded-3xl overflow-hidden'>
             <LazyImage
-              src='/personal-portfolio/media/projects/avenger/combat_animator.webp'
+              src='/media/projects/avenger/combat_animator.webp'
               alt='Combat Animation State Machine'
               className='w-full h-auto'
             />
@@ -690,7 +690,7 @@ export const AvengerLegacyDetail = () => {
                 quick attack animations for variety.
               </p>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/quick_attack.webp'
+                src='/media/projects/avenger/quick_attack.webp'
                 alt='Quick Attack variations'
                 className='w-full h-auto rounded-2xl'
               />
@@ -708,7 +708,7 @@ export const AvengerLegacyDetail = () => {
                 combo attack animations for powerful strikes.
               </p>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/combo_attack.webp'
+                src='/media/projects/avenger/combo_attack.webp'
                 alt='Combo Attack variations'
                 className='w-full h-auto rounded-2xl'
               />
@@ -795,7 +795,7 @@ export const AvengerLegacyDetail = () => {
 
             <div className='card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/target_indicator.webp'
+                src='/media/projects/avenger/target_indicator.webp'
                 alt='Enemy targeting with visual indicator'
                 className='w-full h-full object-cover'
               />
@@ -859,7 +859,7 @@ export const AvengerLegacyDetail = () => {
 
             <div className='card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/animation_events.webp'
+                src='/media/projects/avenger/animation_events.webp'
                 alt='Animation events on attack timeline'
                 className='w-full h-auto'
               />
@@ -940,7 +940,7 @@ public class Slash {
 
             <div className='card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/slash_vfx.webp'
+                src='/media/projects/avenger/slash_vfx.webp'
                 alt='Sword slash VFX in action'
                 className='w-full h-full object-cover'
               />
@@ -1012,7 +1012,7 @@ public class Slash {
 
             <div className='card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/backstab.webp'
+                src='/media/projects/avenger/backstab.webp'
                 alt='Back stabbing mechanic'
                 className='w-full h-auto'
               />
@@ -1115,7 +1115,7 @@ public class Slash {
 
             <div className='card-glass rounded-3xl overflow-hidden'>
               <LazyImage
-                src='/personal-portfolio/media/projects/avenger/item_pickup.webp'
+                src='/media/projects/avenger/item_pickup.webp'
                 alt='Item pickup and collection UI'
                 className='w-full h-full object-cover'
               />

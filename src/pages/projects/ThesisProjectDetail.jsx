@@ -96,22 +96,22 @@ export const ThesisProjectDetail = () => {
     {
       phase: 'Develop Overall Model',
       description: 'Literature review, identify best practices, tool selection',
-      image: '/personal-portfolio/media/projects/fyp/conceptual_model.webp'
+      image: '/media/projects/fyp/conceptual_model.webp'
     },
     {
       phase: 'Build Feature List',
       description: '4 feature sets identified with narrative as standalone set',
-      image: '/personal-portfolio/media/projects/fyp/feature_list.webp'
+      image: '/media/projects/fyp/feature_list.webp'
     },
     {
       phase: 'Plan by Feature',
       description: 'Strategic planning across 4 iterations',
-      image: '/personal-portfolio/media/projects/fyp/feature_plan.webp'
+      image: '/media/projects/fyp/feature_plan.webp'
     },
     {
       phase: 'Design & Build',
       description: 'Iterative feature design and implementation',
-      image: '/personal-portfolio/media/projects/fyp/design_build.webp'
+      image: '/media/projects/fyp/design_build.webp'
     }
   ]
 
@@ -280,7 +280,7 @@ export const ThesisProjectDetail = () => {
               <div className='aspect-video bg-[var(--brand-scale-3-light)] flex items-center justify-center'>
                 <div className='text-center'>
                 <img
-                  src='/personal-portfolio/media/projects/fyp/overview.webp'
+                  src='/media/projects/fyp/overview.webp'
                   alt='Traditional Breathing Exercise'
                   className='w-full h-full object-cover aspect-video'
                 />
@@ -350,7 +350,7 @@ export const ThesisProjectDetail = () => {
               {/* Photo */}
               <div className='card-glass rounded-3xl overflow-hidden'>
                 <img
-                  src='/personal-portfolio/media/projects/fyp/traditional_breathwork.webp'
+                  src='/media/projects/fyp/traditional_breathwork.webp'
                   alt='Traditional Breathing Exercise'
                   className='w-full h-full object-cover aspect-video'
                 />
@@ -413,7 +413,7 @@ export const ThesisProjectDetail = () => {
                 <div className='aspect-video bg-[var(--brand-scale-3-light)] flex items-center justify-center'>
                   <div>
                     <img
-                      src='/personal-portfolio/media/projects/fyp/vr_breath.webp'
+                      src='/media/projects/fyp/vr_breath.webp'
                       alt='Traditional Breathing Exercise'
                       className='w-full h-full object-cover aspect-video'
                     />
@@ -580,7 +580,7 @@ export const ThesisProjectDetail = () => {
                 {/* Top: Flowchart */}
                 <div className='card-glass rounded-3xl overflow-hidden p-8'>
                   <img
-                    src='/personal-portfolio/media/projects/fyp/exp_flow.webp'
+                    src='/media/projects/fyp/exp_flow.webp'
                     alt='Experiment procedure flowchart'
                     className='w-full h-auto'
                   />
@@ -805,7 +805,7 @@ export const ThesisProjectDetail = () => {
                         >
                           {set.isVideo ? (
                             <video
-                              src={`/personal-portfolio/media/projects/fyp/${media}`}
+                              src={`/media/projects/fyp/${media}`}
                               className='w-full h-auto'
                               autoPlay
                               loop
@@ -814,7 +814,7 @@ export const ThesisProjectDetail = () => {
                             />
                           ) : (
                             <img
-                              src={`/personal-portfolio/media/projects/fyp/${media}`}
+                              src={`/media/projects/fyp/${media}`}
                               alt={`${set.title} - ${idx + 1}`}
                               className='w-full h-auto'
                             />
@@ -855,7 +855,7 @@ export const ThesisProjectDetail = () => {
                     {/* Image on bottom */}
                     <div className='card-glass rounded-3xl overflow-hidden'>
                       <img
-                        src={`/personal-portfolio/media/projects/fyp/${set.visual}`}
+                        src={`/media/projects/fyp/${set.visual}`}
                         alt={set.title}
                         className='p-3 h-auto'
                       />
@@ -878,7 +878,7 @@ export const ThesisProjectDetail = () => {
                     >
                       <div className='card-glass rounded-3xl overflow-hidden sticky top-8 w-full h-full'>
                         <img
-                          src={`/personal-portfolio/media/projects/fyp/${set.visual}`}
+                          src={`/media/projects/fyp/${set.visual}`}
                           alt={set.title}
                           className='w-full h-full object-cover object-top'
                         />
@@ -944,7 +944,7 @@ export const ThesisProjectDetail = () => {
                 <div className='aspect-video bg-[var(--brand-scale-3-light)] flex items-center justify-center'>
                   <div className='text-center'>
                     <img
-                      src='/personal-portfolio/media/projects/fyp/participant.webp'
+                      src='/media/projects/fyp/participant.webp'
                       alt='Traditional Breathing Exercise'
                       className='w-full h-full object-cover aspect-video'
                     />
@@ -954,7 +954,7 @@ export const ThesisProjectDetail = () => {
               <div className='card-glass rounded-3xl overflow-hidden'>
                 <div className='aspect-video bg-[var(--brand-scale-3-light)] flex items-center justify-center'>
                   <video
-                    src='/personal-portfolio/media/projects/fyp/participant-move.mp4'
+                    src='/media/projects/fyp/participant-move.mp4'
                     className='w-full h-full object-cover aspect-video'
                     autoPlay
                     loop
@@ -987,7 +987,7 @@ export const ThesisProjectDetail = () => {
                       <div key={idx}>
                         <div className='rounded-2xl overflow-hidden mb-2'>
                           <img
-                            src={`/personal-portfolio/media/projects/fyp/${chart.image}`}
+                            src={`/media/projects/fyp/${chart.image}`}
                             alt={chart.caption}
                             className='w-full h-auto'
                           />

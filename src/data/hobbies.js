@@ -4,8 +4,8 @@
  */
 
 export const hobbiesImages = [
-  "/personal-portfolio/media/hobbies/hob_cooking.webp",
-  "/personal-portfolio/media/hobbies/hob_graphic.webp",
-  "/personal-portfolio/media/hobbies/hob_knit.webp",
-  "/personal-portfolio/media/hobbies/hob_photo.webp",
+  "/media/hobbies/hob_cooking.webp",
+  "/media/hobbies/hob_graphic.webp",
+  "/media/hobbies/hob_knit.webp",
+  "/media/hobbies/hob_photo.webp",
 ];

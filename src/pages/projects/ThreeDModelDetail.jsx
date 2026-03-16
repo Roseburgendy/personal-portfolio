@@ -56,7 +56,7 @@ export const ThreeDModelDetail = () => {
             }}
           >
             <img
-              src='/personal-portfolio/media/projects/3d-model/model_1.webp'
+              src='/media/projects/3d-model/model_1.webp'
               alt='hex_cover'
               className='w-full h-full object-contain rounded-3xl'
             />
@@ -141,7 +141,7 @@ export const ThreeDModelDetail = () => {
               <div className='card-glass rounded-3xl overflow-hidden'>
                 <div className='aspect-[4/3] bg-[#f2d7d7]/30 relative'>
                   <img
-                    src='/personal-portfolio/media/projects/3d-model/castle/ref-architecture.webp'
+                    src='/media/projects/3d-model/castle/ref-architecture.webp'
                     alt='Castle architecture reference'
                     className='w-full h-full object-cover object-top'
                   />
@@ -168,7 +168,7 @@ export const ThreeDModelDetail = () => {
               <div className='card-glass rounded-3xl overflow-hidden'>
                 <div className='aspect-[4/3] bg-[#f2d7d7]/30 relative'>
                   <img
-                    src='/personal-portfolio/media/projects/3d-model/castle/ref-color.webp'
+                    src='/media/projects/3d-model/castle/ref-color.webp'
                     alt='Castle color and mood reference'
                     className='w-full h-full object-cover object-bottom'
                   />
@@ -235,7 +235,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/castle/step1-sketching.webp'
+                      src='/media/projects/3d-model/castle/step1-sketching.webp'
                       alt='Castle base modeling process'
                       className='w-full h-full object-cover'
                     />
@@ -290,7 +290,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/castle/step2-modeling.webp'
+                      src='/media/projects/3d-model/castle/step2-modeling.webp'
                       alt='Castle base modeling process'
                       className='w-full h-full object-cover'
                     />
@@ -358,7 +358,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/castle/step3-texturing.webp'
+                      src='/media/projects/3d-model/castle/step3-texturing.webp'
                       alt='Castle texturing process'
                       className='w-full h-full object-cover'
                     />
@@ -426,7 +426,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/castle/step4-lighting.webp'
+                      src='/media/projects/3d-model/castle/step4-lighting.webp'
                       alt='Castle lighting and rendering process'
                       className='w-full h-full object-cover'
                     />
@@ -499,14 +499,14 @@ export const ThreeDModelDetail = () => {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-[16/10]'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/castle/final-1.webp'
+                    src='/media/projects/3d-model/castle/final-1.webp'
                     alt='Castle final render 1'
                     className='w-full h-full object-cover'
                   />
                 </div>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-[16/10]'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/castle/final-2.webp'
+                    src='/media/projects/3d-model/castle/final-2.webp'
                     alt='Castle final render 2'
                     className='w-full h-full object-cover'
                   />
@@ -517,21 +517,21 @@ export const ThreeDModelDetail = () => {
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-square'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/castle/final-3.webp'
+                    src='/media/projects/3d-model/castle/final-3.webp'
                     alt='Castle detail 1'
                     className='w-full h-full object-cover'
                   />
                 </div>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-square'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/castle/final-4.webp'
+                    src='/media/projects/3d-model/castle/final-4.webp'
                     alt='Castle detail 2'
                     className='w-full h-full object-cover'
                   />
                 </div>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-square'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/castle/final-5.webp'
+                    src='/media/projects/3d-model/castle/final-5.webp'
                     alt='Castle detail 3'
                     className='w-full h-full object-cover'
                   />
@@ -594,7 +594,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/witch/step1-sketching.webp'
+                      src='/media/projects/3d-model/witch/step1-sketching.webp'
                       alt='Witch character sculpting process'
                       className='w-full h-full object-cover'
                     />
@@ -639,7 +639,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/witch/step2-modeling.webp'
+                      src='/media/projects/3d-model/witch/step2-modeling.webp'
                       alt='Witch character sculpting process'
                       className='w-full h-full object-cover'
                     />
@@ -707,7 +707,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/witch/step3-texturing.webp'
+                      src='/media/projects/3d-model/witch/step3-texturing.webp'
                       alt='Witch texturing process'
                       className='w-full h-full object-cover'
                     />
@@ -775,7 +775,7 @@ export const ThreeDModelDetail = () => {
                   </div>
                   <div className='relative bg-[#f2d7d7]/30 mx-6 mb-4 rounded-2xl overflow-hidden aspect-[4/3]'>
                     <img
-                      src='/personal-portfolio/media/projects/3d-model/witch/step4-tlighting.webp'
+                      src='/media/projects/3d-model/witch/step4-tlighting.webp'
                       alt='Witch posing and rendering process'
                       className='w-full h-full object-cover'
                     />
@@ -847,7 +847,7 @@ export const ThreeDModelDetail = () => {
               {/* Row 1: 1 large image */}
               <div className='card-glass rounded-2xl overflow-hidden aspect-[16/9]'>
                 <LazyImage
-                  src='/personal-portfolio/media/projects/3d-model/witch/final-1.webp'
+                  src='/media/projects/3d-model/witch/final-1.webp'
                   alt='Witch hero shot'
                   className='w-full h-full object-cover'
                 />
@@ -857,21 +857,21 @@ export const ThreeDModelDetail = () => {
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-square'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/witch/final-2.webp'
+                    src='/media/projects/3d-model/witch/final-2.webp'
                     alt='Witch detail 1'
                     className='w-full h-full object-cover'
                   />
                 </div>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-square'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/witch/final-3.webp'
+                    src='/media/projects/3d-model/witch/final-3.webp'
                     alt='Witch detail 2'
                     className='w-full h-full object-cover'
                   />
                 </div>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-square'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/witch/final-4.webp'
+                    src='/media/projects/3d-model/witch/final-4.webp'
                     alt='Witch detail 3'
                     className='w-full h-full object-cover'
                   />
@@ -882,14 +882,14 @@ export const ThreeDModelDetail = () => {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/witch/final-5.webp'
+                    src='/media/projects/3d-model/witch/final-5.webp'
                     alt='Witch final render 5'
                     className='w-full h-full object-cover'
                   />
                 </div>
                 <div className='card-glass rounded-2xl overflow-hidden aspect-[4/3]'>
                   <LazyImage
-                    src='/personal-portfolio/media/projects/3d-model/witch/final-6.webp'
+                    src='/media/projects/3d-model/witch/final-6.webp'
                     alt='Witch final render 6'
                     className='w-full h-full object-cover'
                   />

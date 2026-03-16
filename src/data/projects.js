@@ -12,8 +12,8 @@ export const gameProjects = [
     year: '2024',
     duration: '8 Weeks',
     tech: 'Paper Prototyping, Adobe Illustrator, Canva',
-    image: '/personal-portfolio/media/thumbnails/hex_war.webp',
-    image2: '/personal-portfolio/media/projects/hex/gallery/bottom-center.webp',
+    image: '/media/thumbnails/hex_war.webp',
+    image2: '/media/projects/hex/gallery/bottom-center.webp',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -42,7 +42,7 @@ export const gameProjects = [
     year: '2024',
     duration: '6 Weeks',
     tech: 'Figma, Adobe Illustrator, Principle',
-    image: '/personal-portfolio/media/thumbnails/game_ui_design.webp',
+    image: '/media/thumbnails/game_ui_design.webp',
     features: [
       'Responsive UI layouts for multiple screen sizes',
       'Intuitive touch-based navigation system',
@@ -60,12 +60,12 @@ export const gameProjects = [
       'Created interactive prototypes for user testing'
     ],
     gallery: [
-      '/personal-portfolio/media/projects/game-ui/match3_main_menu.webp',
-      '/personal-portfolio/media/projects/game-ui/match3_gameplay.webp',
-      '/personal-portfolio/media/projects/game-ui/match3_shop.webp',
-      '/personal-portfolio/media/projects/game-ui/puzzle_main_menu.webp',
-      '/personal-portfolio/media/projects/game-ui/puzzle_levels.webp',
-      '/personal-portfolio/media/projects/game-ui/puzzle_gameplay.webp'
+      '/media/projects/game-ui/match3_main_menu.webp',
+      '/media/projects/game-ui/match3_gameplay.webp',
+      '/media/projects/game-ui/match3_shop.webp',
+      '/media/projects/game-ui/puzzle_main_menu.webp',
+      '/media/projects/game-ui/puzzle_levels.webp',
+      '/media/projects/game-ui/puzzle_gameplay.webp'
     ],
     links: []
     // Note: This project uses a custom component (GameUIDetail) instead of detailSections
@@ -84,7 +84,7 @@ export const gameProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#), XR Interaction Toolkit, Meta Quest SDK',
-    image: '/personal-portfolio/media/thumbnails/vr_farm.webp',
+    image: '/media/thumbnails/vr_farm.webp',
     features: [
       'Sequential interaction system for guided gameplay flow',
       'Dual-mode XR control supporting both ray and direct interaction',
@@ -124,7 +124,7 @@ export const gameProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [
       'Complex resource management systems',
       'Procedurally generated planets',
@@ -156,7 +156,7 @@ export const gameProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [
       'Complex resource management systems',
       'Procedurally generated planets',
@@ -187,7 +187,7 @@ export const gameProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [
       'Complex resource management systems',
       'Procedurally generated planets',
@@ -218,7 +218,7 @@ export const gameProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [
       'Complex resource management systems',
       'Procedurally generated planets',
@@ -249,7 +249,7 @@ export const gameProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [
       'Complex resource management systems',
       'Procedurally generated planets',
@@ -284,8 +284,8 @@ export const artProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Autodesk Maya, Substance Painter, Adobe Illustrator',
-    image: '/personal-portfolio/media/thumbnails/model_cover.webp',
-    image2: '/personal-portfolio/media/thumbnails/model_2.webp',
+    image: '/media/thumbnails/model_cover.webp',
+    image2: '/media/thumbnails/model_2.webp',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -310,7 +310,7 @@ export const artProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -334,7 +334,7 @@ export const otherProjects = [
     teamSize: '4',
     duration: '8 Weeks',
     tech: 'Flutter (Dart), Firebase, REST API',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [
       'Secure user authentication with email and social login',
       'Real-time progress tracking and analytics',
@@ -367,7 +367,7 @@ export const otherProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -386,7 +386,7 @@ export const otherProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Unity (C#)',
-    image: '/personal-portfolio/media/thumbnails/hex_war.png',
+    image: '/media/thumbnails/hex_war.png',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -406,8 +406,8 @@ export const otherProjects = [
     teamSize: '1',
     duration: '8 Months',
     tech: 'Unity3D, C#',
-    image: '/personal-portfolio/media/thumbnails/thesis_cover.webp',
-    image2: '/personal-portfolio/media/thumbnails/thesis_cover2.webp',
+    image: '/media/thumbnails/thesis_cover.webp',
+    image2: '/media/thumbnails/thesis_cover2.webp',
     features: [
     ],
     responsibilities: [
@@ -431,8 +431,8 @@ export const featuredProjects = [
     year: '2024',
     duration: '8 Weeks',
     tech: 'Paper Prototyping, Adobe Illustrator, Canva',
-    image: '/personal-portfolio/media/thumbnails/hex_war.webp',
-    image2: '/personal-portfolio/media/projects/hex/gallery/bottom-center.webp',
+    image: '/media/thumbnails/hex_war.webp',
+    image2: '/media/projects/hex/gallery/bottom-center.webp',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -451,8 +451,8 @@ export const featuredProjects = [
     teamSize: '5',
     duration: '4 Weeks',
     tech: 'Autodesk Maya, Substance Painter, Adobe Illustrator',
-    image: '/personal-portfolio/media/thumbnails/model_cover.webp',
-    image2: '/personal-portfolio/media/thumbnails/model_2.webp',
+    image: '/media/thumbnails/model_cover.webp',
+    image2: '/media/thumbnails/model_2.webp',
     features: [],
     responsibilities: [],
     gallery: [],
@@ -472,8 +472,8 @@ export const featuredProjects = [
     teamSize: '1',
     duration: '8 Months',
     tech: 'Unity3D, C#',
-    image: '/personal-portfolio/media/thumbnails/thesis_cover.webp',
-    image2: '/personal-portfolio/media/thumbnails/thesis_cover2.webp',
+    image: '/media/thumbnails/thesis_cover.webp',
+    image2: '/media/thumbnails/thesis_cover2.webp',
     features: [
     ],
     responsibilities: [
