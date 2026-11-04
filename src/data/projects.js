@@ -271,7 +271,7 @@ export const gameProjects = [
 
 // Art Projects
 export const artProjects = [
-  {
+/*   {
     id: 1,
     slug: '3d-model', // Unique slug for routing
     title: 'Autumn Theme Modeling',
@@ -296,7 +296,7 @@ export const artProjects = [
       { type: 'overview' },
       { type: 'gallery' }
     ]
-  },
+  }, */
 /*   {
     id: 2,
     slug: 'ae-proj', // Unique slug for routing
@@ -402,7 +402,7 @@ export const otherProjects = [
       'A immersive VR serious game that turns breathing exercises into an engaging story-driven experience for anxiety management. The project examined how narrative elements influence user engagement and evaluated the game\'s therapeutic effects on anxiety relief.',
     fullDescription:
       '',
-    year: '2024',
+    year: '2026',
     teamSize: '1',
     duration: '8 Months',
     tech: 'Unity3D, C#',
