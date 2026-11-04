@@ -13,7 +13,7 @@ export const Footer = () => {
 
         {/* Credit */}
         <p className="text-xs md:text-sm text-[var(--muted)] text-center font-open-sans">
-          ©2025 Designed and Developed with ❤️ by Ye Wang
+          ©2025 Designed and Developed with ❤️ by Freya Wang
         </p>
       </div>
     </footer>
