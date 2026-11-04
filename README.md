@@ -2,7 +2,7 @@
 
 A single-page personal portfolio with a short bio, education, links and selected projects, built with React, Vite and Tailwind CSS.
 
-**Live site:** https://roseburgendy.github.io/
+**Live site:** https://wangye.site/
 
 ## Run locally
 
@@ -33,7 +33,4 @@ npm run preview
 
 `npm run build` creates the production site in `dist/`, and `npm run preview` serves it locally so you can check it.
 
-The repo is set up for two hosts:
-
-- **Vercel:** uses the settings in `vercel.json`.
-- **GitHub Pages:** `npm run deploy` builds the site and publishes it with `gh-pages`.
+The site is hosted on Vercel, which deploys it when changes reach `main`. Its settings are in `vercel.json`.

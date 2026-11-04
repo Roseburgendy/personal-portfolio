@@ -33,12 +33,14 @@ const links = [
 
 const education = [
   {
-    school: 'Georgia Tech',
+    school: 'Georgia Institute of Technology',
+    url: 'https://www.gatech.edu/',
     degree: 'M.S. CSE',
     years: '2026 — 2028'
   },
   {
     school: 'Xiamen University Malaysia',
+    url: 'https://www.xmu.edu.my/',
     degree: 'B.E. in Digital Media Technology',
     years: '2022 — 2026'
   }
@@ -90,19 +92,19 @@ export const Home = () => {
         className='max-w-6xl mx-auto px-4 relative z-10 flex flex-col lg:flex-row lg:items-start gap-12 mb-20 scroll-mt-32'
       >
         {/* Profile card */}
-        <aside className='card-glass rounded-3xl p-6 w-full max-w-sm mx-auto lg:mx-0 lg:w-80 lg:flex-shrink-0 lg:top-28 lg:[@media(min-height:800px)]:sticky'>
+        <aside className='card-glass rounded-3xl p-6 w-full max-w-sm mx-auto lg:mx-0 lg:w-80 lg:flex-shrink-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto [scrollbar-width:none]'>
           <img
             src={profile}
-            alt='Freya Wang(王晔)'
-            className='w-full aspect-square rounded-2xl object-cover object-[50%_20%]'
+            alt='Freya Wang'
+            className='w-full aspect-square lg:aspect-auto lg:h-[min(272px,max(140px,calc(100vh-36rem)))] rounded-2xl object-cover object-[50%_20%]'
           />
           <h1
             className='text-2xl font-bold mt-5'
             style={{ color: 'var(--text)' }}
           >
-            Freya Wang(王晔)
+            Freya Wang
           </h1>
-          {education.map(({ school, degree, years }) => (
+          {education.map(({ school, url, degree, years }) => (
             <div
               key={school}
               className='mt-5 pt-5 border-t'
@@ -112,7 +114,14 @@ export const Home = () => {
                 className='text-base font-bold'
                 style={{ color: 'var(--text)' }}
               >
-                {school}
+                <a
+                  href={url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='underline decoration-1 underline-offset-4 hover:text-[var(--accent-600)] transition-colors'
+                >
+                  {school}
+                </a>
               </h2>
               <p className='text-sm mt-1' style={{ color: 'var(--muted)' }}>
                 {degree}
