@@ -11,12 +11,12 @@ import { gameProjects, artProjects, otherProjects } from '../../data/projects'
 const links = [
   {
     label: 'Resume',
-    href: 'https://drive.google.com/file/d/1N0HLWbojgZKkyNWon8fZw7-94CVVKubp/view?usp=sharing',
+    href: 'https://drive.google.com/file/d/19E7Xa8SvFEQVnnhzXeCjjFK7qvGFlNG0/view?usp=sharing',
     Icon: FileText
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ye-wang-b385aa314/',
+    href: 'https://www.linkedin.com/in/freya-wang-b385aa314/',
     Icon: FaLinkedinIn
   },
   {
@@ -26,7 +26,7 @@ const links = [
   },
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/rose_burgendy/',
+    href: 'https://www.instagram.com/im_ywang/',
     Icon: FaInstagram
   }
 ]
