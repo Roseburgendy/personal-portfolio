@@ -1,8 +1,9 @@
 // Reusable Project Card Component
 export const ProjectCard = ({ project }) => {
   return (
-    <article
-      className="rounded-3xl h-full flex flex-col md:flex-row"
+    <a
+      href={`#project/${project.slug}`}
+      className="group rounded-3xl h-full flex flex-col md:flex-row transition-shadow duration-300 hover:shadow-xl"
       style={{ backgroundColor: "var(--brand-scale-3-light)" }}
     >
       {/* Image - with padding for margin effect */}
@@ -11,7 +12,7 @@ export const ProjectCard = ({ project }) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       </div>
@@ -28,7 +29,7 @@ export const ProjectCard = ({ project }) => {
 
         {/* Title */}
         <h3
-          className="text-2xl font-bold leading-tight"
+          className="text-2xl font-bold leading-tight group-hover:underline decoration-2 underline-offset-4"
           style={{ color: "var(--brand-scale-12-light)" }}
         >
           {project.title}
@@ -58,6 +59,6 @@ export const ProjectCard = ({ project }) => {
           {project.tech}
         </p>
       </div>
-    </article>
+    </a>
   );
 };

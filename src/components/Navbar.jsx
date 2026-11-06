@@ -32,7 +32,13 @@ export const Navbar = () => {
   };
 
   const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // On a project subpage: go back to the home page at that section
+      window.location.hash = id;
+    }
     setMobileMenuOpen(false);
   };
 
